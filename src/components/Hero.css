@@ -1,0 +1,14 @@
+.image-container {
+    display: flex;
+    
+    width: 200px; /* Imposta la larghezza desiderata */
+    height: 200px; /* Imposta l'altezza desiderata */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    overflow: hidden; /* Nasconde eventuali parti dell'immagine che escono dalla forma circolare */
+  }
+  
+  .image-container img {
+    width: 100%; /* Assicura che l'immagine occupi tutto lo spazio disponibile nel contenitore */
+    height: 100%; /* Assicura che l'immagine occupi tutto lo spazio disponibile nel contenitore */
+    object-fit: cover; /* Rende l'immagine riempire completamente il contenitore senza deformazioni */
+  }
