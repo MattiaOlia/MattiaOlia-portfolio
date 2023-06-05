@@ -85,7 +85,7 @@ import { IconButton } from '@mui/material';
           },
         }} />
   </Box>
-  <Box flexGrow={1} pl={3}  sx={{marginLeft: isLargeScreen ? "2em" : "1.5em", paddingRight : isLargeScreen ? "6em" : "2em"}} display={'flex'} flexDirection={"column"} gap={2} >
+  <Box flexGrow={1} pl={3}  sx={{marginLeft: isLargeScreen ? "2em" : "1.5Cem", paddingRight : isLargeScreen ? "6em" : "2em"}} display={'flex'} flexDirection={"column"} gap={2} >
     <Typography variant={isLargeScreen ? "h1": "h4"} fontWeight={isLargeScreen ? 500 : 400 }>
       Hi, I am John, <br />
       Creative Technologist
