@@ -117,9 +117,7 @@ function Navbar() {
 
              
             </Menu>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              My Website
-            </Typography>
+            
           </Toolbar>
         ) : (
           <Toolbar>

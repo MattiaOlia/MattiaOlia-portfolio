@@ -11,6 +11,8 @@ import { Fade } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
+import AvatarComp from './avatar/AvatarComp';
+import BackgroundComp from './background/BackgroundComp';
 
  function Hero() {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
@@ -19,6 +21,10 @@ import { IconButton } from '@mui/material';
     const isXLargeScreen = useMediaQuery('(min-width: 1371px)');;
     const [isVisible, setIsVisible] = useState(false);
     const heroRef = useRef(null)
+    const [zoomed, setZoomed] = useState(false);
+  useEffect(() => {
+    setZoomed(()=>!zoomed);
+  }, []);
 
     
 
@@ -31,10 +37,11 @@ import { IconButton } from '@mui/material';
                   
                    {isSmallScreen ? (
                            <Box minHeight={"100vh"} display={"flex"}
-                           flexDirection={"column"} alignItems={'center'} gap={3} justifyContent={"center"}>
+                           flexDirection={"column"} alignItems={'center'} gap={2} justifyContent={"center"}>
                             
-                            <Box className="image-container" mt= {"-8em"}>
-                               <img src={imageHero} alt="Hero" />
+                            <Box className="image-container" mt= {"-5em"}>
+                               {/*<img src={imageHero} alt="Hero" />*/}
+                               <AvatarComp />
                                </Box>
                                   <Typography variant="h4" fontWeight={600}>
                                   Hi, I am Mattia, <br/>
@@ -72,23 +79,20 @@ import { IconButton } from '@mui/material';
   pl={isLargeScreen ? "5em" : "0"}
   margin={isXLargeScreen ? "8em auto" : "5em auto"}
 >
-  <Box flexShrink={0} className="image-container" sx={{ marginLeft: isLargeScreen ? "auto 6em" : "auto 2em", width: isLargeScreen ? "250px" : "200px" ,
-          height: isLargeScreen ? "250px" : "200px" , }}>
-    <img src={imageHero} alt="Hero"  sx={{
+  <Box flexShrink={0} className="image-container" sx={{ marginLeft: isLargeScreen ? "auto 6em" : "auto 2em", width: isLargeScreen ? "300px" : "200px" ,
+          height: isLargeScreen ? "270px" : "200px" , overflow: "hidden" }}>
+    <Box sx={{
           width: '100%',
-          maxWidth: '400px',
-          transition: 'all 0.3s ease',
-          '@media (min-width: 600px)': {
-            '&:hover': {
-              transform: 'scale(1.2)',
-            },
-          },
-        }} />
+          transition: 'all 5s ease',
+          transform: zoomed ? 'scale(1.4)' : 'scale(1)'
+           
+        }}>
+      <AvatarComp /></Box>
   </Box>
   <Box flexGrow={1} pl={3}  sx={{marginLeft: isLargeScreen ? "2em" : "1.5Cem", paddingRight : isLargeScreen ? "6em" : "2em"}} display={'flex'} flexDirection={"column"} gap={2} >
     <Typography variant={isLargeScreen ? "h1": "h4"} fontWeight={isLargeScreen ? 500 : 400 }>
-      Hi, I am John, <br />
-      Creative Technologist
+      Hi, I am Mattia, <br />
+      Front-End Developer
     </Typography>
     <Typography variant="body1">
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.<br/>Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
@@ -119,7 +123,7 @@ import { IconButton } from '@mui/material';
   </Box>
 </Box>
       )}    
-              
+          {isLargeScreen && <BackgroundComp />} 
                 </Box>
         </ThemeProvider>
         
@@ -127,3 +131,4 @@ import { IconButton } from '@mui/material';
 }
 
 export default Hero;
+

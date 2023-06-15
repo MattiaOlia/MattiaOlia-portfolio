@@ -12,6 +12,7 @@ import ReactDOM from 'react-dom';
 import { Contact } from './components/Contact';
 import { InView } from 'react-intersection-observer';
 import { Fade } from '@mui/material';
+import BackgroundComp from './components/background/BackgroundComp';
 
 function Home() {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
@@ -25,6 +26,7 @@ function Home() {
   return (
     <div>
         <Router>
+          
           <Navbar />
           <InView onChange={(inView, entry) => setIsVisible(inView)}>
           <Fade in={isVisible} timeout={1000}>
@@ -34,15 +36,19 @@ function Home() {
              flexDirection="column"
              mt={"2em"}
              >
+            
             <Hero />
+          <Box bgcolor={"white"}>
           <  Box  m={isSmallScreen ? 0 : '2em'}  id="projects" ref={projectsRef}>
             <Projects />
         </Box>
         <Box  id="about" ref={aboutRef}>
           <About />
         </Box>
+        
         <Box id="contact" ref={contactRef} >
           <Contact />
+        </Box>
         </Box>
       </Box>
       </Fade>

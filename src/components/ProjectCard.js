@@ -25,8 +25,8 @@ export default function ProjectCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-           <GitHubIcon />
+      <CardActions mt={2}>
+      <a href={props.project_ghl} target="_blank" rel="noopener noreferrer"> <GitHubIcon color="primary" fontSize="large"  /> </a>
       </CardActions>
     </Card>
   );
