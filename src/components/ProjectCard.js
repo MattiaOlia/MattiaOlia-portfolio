@@ -5,16 +5,19 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { useMediaQuery } from '@mui/material';
+
 
 export default function ProjectCard(props) {
+  const isLargeScreen = useMediaQuery('(min-width: 1200px)');
   return (
-    <Card sx={{ maxWidth: 345, width:"100%" }} >
+    <Card sx={{ maxWidth: isLargeScreen ? 400 : 600, width:"100%" }} >
       <CardActionArea>
         <CardMedia
           component="img"
           height="160"
           image={props.project_image}
-          alt="green iguana"
+          alt="image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

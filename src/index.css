@@ -12,7 +12,19 @@ code {
     monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'EB Garamond, serif'; /* Cambia 'ED' con il nome del carattere che desideri utilizzare per i titoli */
-  /* Aggiungi altre proprietà di stile per personalizzare ulteriormente i titoli, se necessario */
+
+
+
+@font-face {
+  font-family: 'Karla-VariableFont_wght';
+  src: url('./font/Karla-VariableFont_wght.ttf') format('truetype');
+  /* Aggiungi altre varianti o formati del font se disponibili */
+}
+
+body {
+  font-family: 'Karla-VariableFont_wght', sans-serif;
+}
+
+a{
+  text-decoration: underline
 }

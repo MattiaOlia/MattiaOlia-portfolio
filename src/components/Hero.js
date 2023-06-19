@@ -5,14 +5,13 @@ import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useMediaQuery } from '@mui/material';
 import { Button } from '@mui/material';
-import imageHero from "../images/imageHero.avif"
 import "./Hero.css"
-import { Fade } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
 import AvatarComp from './avatar/AvatarComp';
 import BackgroundComp from './background/BackgroundComp';
+
 
  function Hero() {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
@@ -37,7 +36,7 @@ import BackgroundComp from './background/BackgroundComp';
                   
                    {isSmallScreen ? (
                            <Box minHeight={"100vh"} display={"flex"}
-                           flexDirection={"column"} alignItems={'center'} gap={2} justifyContent={"center"}>
+                           flexDirection={"column"} alignItems={'center'} gap={1} justifyContent={"center"}>
                             
                             <Box className="image-container" mt= {"-5em"}>
                                {/*<img src={imageHero} alt="Hero" />*/}
@@ -47,7 +46,13 @@ import BackgroundComp from './background/BackgroundComp';
                                   Hi, I am Mattia, <br/>
                                  Front-end developer
                                   </Typography>
-                                  <Typography variant="body1">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</Typography>
+                                  <Typography variant="body1">
+    I focus on development of web applications, something that I enjoy exploring and learning more about everyday.
+    I enjoy exploring and learning more about it every day.
+    Always looking to connect!<br/>
+Want to get in touch about a project? Send me a message at :
+    </Typography>
+    <Typography color={"green"} variant="h6" fontWeight={600}>MattiaOlia97@gmail.com</Typography>
                                   <Box alignItems={'center'} display={'flex'}>
                                   <Button variant="contained" color="primary">Download CV</Button>
                                   <IconButton
@@ -77,7 +82,7 @@ import BackgroundComp from './background/BackgroundComp';
   justifyContent="center"
   textAlign="left"
   pl={isLargeScreen ? "5em" : "0"}
-  margin={isXLargeScreen ? "8em auto" : "5em auto"}
+  margin={isLargeScreen ? "8em auto" : "5em auto"}
 >
   <Box flexShrink={0} className="image-container" sx={{ marginLeft: isLargeScreen ? "auto 6em" : "auto 2em", width: isLargeScreen ? "300px" : "200px" ,
           height: isLargeScreen ? "270px" : "200px" , overflow: "hidden" }}>
@@ -94,9 +99,13 @@ import BackgroundComp from './background/BackgroundComp';
       Hi, I am Mattia, <br />
       Front-End Developer
     </Typography>
-    <Typography variant="body1">
-      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.<br/>Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+    <Typography variant="h6">
+    I focus on development of web applications, something that I enjoy exploring and learning more about everyday.
+    I enjoy exploring and learning more about it every day.
+    Always looking to connect!<br/>
+Want to get in touch about a project? Send me a message at :
     </Typography>
+    <Typography color={"green"} variant="h5" fontWeight={600}>MattiaOlia97@gmail.com</Typography>
     <Box display={'flex'} alignItems={'center'} gap={"1.5em"}>
     <Button variant="contained" color="primary" sx={{ width: 'fit-content' }}>
       Download CV

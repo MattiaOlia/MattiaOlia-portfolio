@@ -39,7 +39,7 @@ export function Projects() {
             {isLargeScreen ? (
               <Fade in={isVisible} timeout={1000}>
                 <Box>
-                  <Typography variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>Projects</Typography>
+                  <Typography variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>My projects</Typography>
                   <Box display={'flex'} justifyContent={"center"} sx={{padding:"5em "}} gap="2em" flexWrap={"wrap"}>
                   
                   <a href="https://mattiaolia.github.io/CTrack/" target="_blank" rel="noopener noreferrer">
@@ -71,7 +71,7 @@ export function Projects() {
               </Fade>
             ) : (
               <Box>
-                <Typography variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>Projects</Typography>
+                <Typography variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>My Projects</Typography>
                 <Box display={'flex'} justifyContent={"center"} sx={{padding:"5em "}} gap="2em" flexWrap={"wrap"}>
                   
                 <a href="https://mattiaolia.github.io/CTrack/" target="_blank" rel="noopener noreferrer">
