@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/MattiaOlia-portfolio/static/css/main.320a952a.css",
-    "main.js": "/MattiaOlia-portfolio/static/js/main.3883ffbc.js",
+    "main.css": "/MattiaOlia-portfolio/static/css/main.404a2fd0.css",
+    "main.js": "/MattiaOlia-portfolio/static/js/main.c077c749.js",
     "static/js/787.1ed0c42c.chunk.js": "/MattiaOlia-portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/ProjectImage2.png": "/MattiaOlia-portfolio/static/media/ProjectImage2.f3e1324b985dad7d4d51.png",
+    "static/media/Karla-VariableFont_wght.ttf": "/MattiaOlia-portfolio/static/media/Karla-VariableFont_wght.873b3ab26751da74a1bc.ttf",
     "static/media/ProjectImage1.png": "/MattiaOlia-portfolio/static/media/ProjectImage1.a8b83a2b40a547716c85.png",
-    "static/media/ProjectImage3.png": "/MattiaOlia-portfolio/static/media/ProjectImage3.5d635df0c80174f95baf.png",
+    "static/media/ProjectImage3.png": "/MattiaOlia-portfolio/static/media/ProjectImage3.8b63500450b663dc3afb.png",
     "static/media/eb-garamond-latin-600italic.woff": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-600italic.99ac2cb4253d771fdd5a.woff",
     "static/media/eb-garamond-latin-700italic.woff": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-700italic.43325a2b4808c8750d80.woff",
     "static/media/eb-garamond-latin-500italic.woff": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-500italic.486be37b64cb414d611e.woff",
@@ -26,7 +27,6 @@
     "static/media/eb-garamond-latin-400italic.woff2": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-400italic.54a4010ff94100856da4.woff2",
     "static/media/eb-garamond-latin-800.woff2": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-800.5a05133ead553d190128.woff2",
     "static/media/eb-garamond-latin-400.woff2": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-400.3714960344d94df820a9.woff2",
-    "static/media/imageHero.avif": "/MattiaOlia-portfolio/static/media/imageHero.86b2c2b97bc06cc50153.avif",
     "static/media/heebo-latin-800.woff": "/MattiaOlia-portfolio/static/media/heebo-latin-800.83b58880efd51ff0f01d.woff",
     "static/media/heebo-latin-700.woff": "/MattiaOlia-portfolio/static/media/heebo-latin-700.3b0fa200ad6275102094.woff",
     "static/media/heebo-latin-900.woff": "/MattiaOlia-portfolio/static/media/heebo-latin-900.1bea43cced9703c61832.woff",
@@ -46,12 +46,12 @@
     "static/media/heebo-latin-400.woff2": "/MattiaOlia-portfolio/static/media/heebo-latin-400.375dc5fc1d1dcd46d770.woff2",
     "static/media/heebo-latin-100.woff2": "/MattiaOlia-portfolio/static/media/heebo-latin-100.070d646b699bf25bbb17.woff2",
     "index.html": "/MattiaOlia-portfolio/index.html",
-    "main.320a952a.css.map": "/MattiaOlia-portfolio/static/css/main.320a952a.css.map",
-    "main.3883ffbc.js.map": "/MattiaOlia-portfolio/static/js/main.3883ffbc.js.map",
+    "main.404a2fd0.css.map": "/MattiaOlia-portfolio/static/css/main.404a2fd0.css.map",
+    "main.c077c749.js.map": "/MattiaOlia-portfolio/static/js/main.c077c749.js.map",
     "787.1ed0c42c.chunk.js.map": "/MattiaOlia-portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.320a952a.css",
-    "static/js/main.3883ffbc.js"
+    "static/css/main.404a2fd0.css",
+    "static/js/main.c077c749.js"
   ]
 }
