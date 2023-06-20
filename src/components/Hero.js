@@ -48,11 +48,13 @@ import BackgroundComp from './background/BackgroundComp';
                                   </Typography>
                                   <Typography variant="body1">
     I focus on development of web applications, something that I enjoy exploring and learning more about everyday.
-    I enjoy exploring and learning more about it every day.
     Always looking to connect!<br/>
 Want to get in touch about a project? Send me a message at :
     </Typography>
-    <Typography color={"green"} variant="h6" fontWeight={600}>MattiaOlia97@gmail.com</Typography>
+    <a style={{color:"green" }} href="mailto:mattiaolia97@gmail.com">
+     <Typography variant="h6" fontWeight={600} sx={{transition: 'fade in 0.3s ease',
+        '&:hover': {
+          textDecoration: "underline"}}}>mattiaolia97@gmail.com</Typography></a>
                                   <Box alignItems={'center'} display={'flex'}>
                                   <Button variant="contained" color="primary">Download CV</Button>
                                   <IconButton
@@ -101,11 +103,16 @@ Want to get in touch about a project? Send me a message at :
     </Typography>
     <Typography variant="h6">
     I focus on development of web applications, something that I enjoy exploring and learning more about everyday.
-    I enjoy exploring and learning more about it every day.
+   
     Always looking to connect!<br/>
-Want to get in touch about a project? Send me a message at :
+Want to get in touch about a project? Send me a message at:
     </Typography>
-    <Typography color={"green"} variant="h5" fontWeight={600}>MattiaOlia97@gmail.com</Typography>
+  
+    <a style={{color:"green" }} href="mailto:mattiaolia97@gmail.com">
+     <Typography variant="h5" fontWeight={600} sx={{transition: 'fade in 0.3s ease',
+        '&:hover': {
+          textDecoration: "underline"}}}>mattiaolia97@gmail.com</Typography></a>
+
     <Box display={'flex'} alignItems={'center'} gap={"1.5em"}>
     <Button variant="contained" color="primary" sx={{ width: 'fit-content' }}>
       Download CV

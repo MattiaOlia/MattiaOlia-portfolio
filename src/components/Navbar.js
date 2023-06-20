@@ -6,7 +6,7 @@ import theme from "../theme"
 import { useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
-
+import { scroller } from 'react-scroll'
 
 
 function Navbar() {
@@ -44,14 +44,14 @@ function Navbar() {
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
-      scroll.scrollTo(aboutRef.current.offsetTop, { duration: 500, smooth: true });
+      scroller.scrollTo(aboutRef.current.offsetTop, { duration: 500, smooth: true });
       handleClose();
     }
   };
 
   const scrollToContact = () => {
     if (contactRef.current) {
-      scroll.scrollTo(contactRef.current.offsetTop, { duration: 500, smooth: true });
+      scroller.scrollTo(contactRef.current.offsetTop - 300, { duration: 500, smooth: true });
       handleClose();
     }
   };
@@ -66,6 +66,7 @@ function Navbar() {
       <AppBar position="fixed">
         {isSmallScreen ? (
           <Toolbar position={"fixed"}>
+            <Box display={"flex"} justifyContent={"space-between"} sx={{width:"100%"}} alignItems={"center"}>
             <IconButton onClick={handleClick} edge="start" color="inherit" aria-label="menu">
               <MenuIcon />
             </IconButton>
@@ -102,7 +103,7 @@ function Navbar() {
               activeClass="active"
               onClick={handleClose}
               style={{ textDecoration: 'none', color: 'inherit'}}
-              offset={-70}
+              offset={-90}
             >
                 About
                 </ScrollLink>
@@ -119,6 +120,7 @@ function Navbar() {
               activeClass="active"
               onClick={handleClose}
               style={{ textDecoration: 'none', color: 'inherit'  }}
+              offset={+400}
             >
                 Contact
                 </ScrollLink>
@@ -126,14 +128,43 @@ function Navbar() {
 
              
             </Menu>
-            
+            <Typography color="white" variant="h5" sx={{ transition: 'fade in 0.5s ease',
+            '&:hover': {
+              textDecoration: "underline"}}}>
+              <ScrollLink
+                  to="hero"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  activeClass="active"
+                  style={{ textDecoration: 'none', color: 'inherit', cursor:"pointer" }}
+                  offset={-100}
+                >
+                  Mattia's Portfolio
+                </ScrollLink>
+              </Typography>
+            </Box>
           </Toolbar>
         ) : (
           <Toolbar>
             <Box display={'flex'} width={"100%"}
             justifyContent={"space-evenly"}
             alignItems={"center"}>
-               <Typography variant='h6'>Mattia's Portfolio</Typography>
+               <Typography color="white" variant="h5" sx={{ transition: 'fade in 0.5s ease',
+            '&:hover': {
+              textDecoration: "underline"}}}>
+              <ScrollLink
+                  to="hero"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  activeClass="active"
+                  style={{ textDecoration: 'none', color: 'inherit', cursor:"pointer" }}
+                  offset={-100}
+                >
+                  Mattia's Portfolio
+                </ScrollLink>
+              </Typography>
             <Box
               display="flex"
               
@@ -142,9 +173,9 @@ function Navbar() {
               margin={3}
             >
               
-              <Button sx={buttonStyles}>
-              <Typography color="White" variant="body1" sx={{ fontSize: 20 }
-            }>
+              <Typography color="white" variant="h5" sx={{ transition: 'fade in 0.5s ease',
+            '&:hover': {
+              textDecoration: "underline"}}}>
                 <ScrollLink
                   to="projects"
                   smooth={true}
@@ -157,9 +188,10 @@ function Navbar() {
                   Projects
                 </ScrollLink>
               </Typography>
-              </Button>
-              <Button sx={buttonStyles}>
-              <Typography color={"white"} variant="body1" sx={{ fontSize: 20 } }>
+              
+              <Typography color="white" variant="h5" sx={{ transition: 'fade in 0.5s ease',
+            '&:hover': {
+              textDecoration: "underline"}}}>
                 <ScrollLink
                   to="about"
                   smooth={true}
@@ -172,10 +204,11 @@ function Navbar() {
                   About
                 </ScrollLink>
               </Typography>
-              </Button>
+              
 
-              <Button sx={buttonStyles}>
-              <Typography variant="body1" color="white" sx={{ fontSize: 20 } }>
+              <Typography color="white" variant="h5" sx={{ transition: 'fade in 0.5s ease',
+            '&:hover': {
+              textDecoration: "underline"}}}>
                 <ScrollLink
                   to="contact"
                   smooth={true}
@@ -183,11 +216,12 @@ function Navbar() {
                   spy={true}
                   activeClass="active"
                   style={{ textDecoration: 'none', color: 'inherit',cursor:"pointer" }}
+                  
                 >
                   Contact
                 </ScrollLink>
               </Typography>
-              </Button>  
+               
               </Box>
             </Box>
           </Toolbar>

@@ -20,6 +20,7 @@ function Home() {
   const projectsRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef= useRef(null);
+  const heroRef=useRef(null)
   const [isVisible, setIsVisible] = useState(false);
   
 
@@ -35,6 +36,7 @@ function Home() {
              display="flex"
              flexDirection="column"
              mt={"2em"}
+             id="hero" ref={heroRef}
              >
             
             <Hero />
@@ -45,7 +47,6 @@ function Home() {
         <Box  id="about" ref={aboutRef}>
           <About />
         </Box>
-        
         <Box id="contact" ref={contactRef} >
           <Contact />
         </Box>

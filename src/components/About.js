@@ -3,8 +3,6 @@ import { ThemeProvider } from '@emotion/react';
 import theme from "../theme";
 import { Typography, Box, Fade } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
-import AvatarComp from './avatar/AvatarComp';
-import BackgroundComp from './background/BackgroundComp';
 
 
 export function About() {
@@ -37,7 +35,7 @@ export function About() {
           <Fade in={isVisible} timeout={1000}>
             <Box>
               <Typography variant={isSmallScreen ? 'h2' : 'h1'} fontWeight={400}>
-                About mE
+                About Me
               </Typography>
               <Box display="flex" justifyContent="center" sx={{ padding: ' 2em 15em' }}>
                 <Fade in={isVisible} timeout={1000}>

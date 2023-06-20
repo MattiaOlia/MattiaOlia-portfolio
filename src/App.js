@@ -13,3 +13,5 @@ function App() {
 }
 
 export default App;
+
+///* finire il footer, aggiustare navbatr
