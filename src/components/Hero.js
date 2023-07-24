@@ -11,7 +11,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
 import AvatarComp from './avatar/AvatarComp';
 import BackgroundComp from './background/BackgroundComp';
-import CVfile from "./Mattia Olia.pdf"
+import CVfile from "./Mattia Olia CV.pdf"
 import { Document, Page, pdfjs } from 'react-pdf';
 
  function Hero() {
@@ -28,15 +28,15 @@ import { Document, Page, pdfjs } from 'react-pdf';
 
   const pdfUrl = CVfile;
 
-  // Inizializza react-pdf
+
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   
     const downloadPDF = () => {
-      // Crea un link temporaneo per il download del PDF
+      
       const link = document.createElement('a');
       link.href = pdfUrl;
       link.target = '_blank';
-      link.download = 'Mattia Olia CV.pdf'; // Nome con cui verrà scaricato il file
+      link.download = 'Mattia Olia CV.pdf'; 
       link.click();
     };
   
@@ -132,7 +132,7 @@ Want to get in touch about a project? Send me a message at:
           textDecoration: "underline"}}}>mattiaolia97@gmail.com</Typography></a>
 
     <Box display={'flex'} alignItems={'center'} gap={"1.5em"}>
-    <Button variant="contained" color="primary" sx={{ width: 'fit-content' }}>
+    <Button onClick={downloadPDF} variant="contained" color="primary" sx={{ width: 'fit-content' }}>
       Download CV
     </Button>
     <IconButton
