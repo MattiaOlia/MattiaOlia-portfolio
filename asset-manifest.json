@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/MattiaOlia-portfolio/static/css/main.404a2fd0.css",
-    "main.js": "/MattiaOlia-portfolio/static/js/main.c077c749.js",
+    "main.js": "/MattiaOlia-portfolio/static/js/main.d1069086.js",
     "static/js/787.1ed0c42c.chunk.js": "/MattiaOlia-portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/ProjectImage2.png": "/MattiaOlia-portfolio/static/media/ProjectImage2.f3e1324b985dad7d4d51.png",
     "static/media/Karla-VariableFont_wght.ttf": "/MattiaOlia-portfolio/static/media/Karla-VariableFont_wght.873b3ab26751da74a1bc.ttf",
     "static/media/ProjectImage1.png": "/MattiaOlia-portfolio/static/media/ProjectImage1.a8b83a2b40a547716c85.png",
+    "static/media/Mattia Olia CV.pdf": "/MattiaOlia-portfolio/static/media/Mattia Olia CV.9baaaa863d7201c52d69.pdf",
     "static/media/ProjectImage3.png": "/MattiaOlia-portfolio/static/media/ProjectImage3.8b63500450b663dc3afb.png",
     "static/media/eb-garamond-latin-600italic.woff": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-600italic.99ac2cb4253d771fdd5a.woff",
     "static/media/eb-garamond-latin-700italic.woff": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-700italic.43325a2b4808c8750d80.woff",
@@ -47,11 +48,11 @@
     "static/media/heebo-latin-100.woff2": "/MattiaOlia-portfolio/static/media/heebo-latin-100.070d646b699bf25bbb17.woff2",
     "index.html": "/MattiaOlia-portfolio/index.html",
     "main.404a2fd0.css.map": "/MattiaOlia-portfolio/static/css/main.404a2fd0.css.map",
-    "main.c077c749.js.map": "/MattiaOlia-portfolio/static/js/main.c077c749.js.map",
+    "main.d1069086.js.map": "/MattiaOlia-portfolio/static/js/main.d1069086.js.map",
     "787.1ed0c42c.chunk.js.map": "/MattiaOlia-portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.404a2fd0.css",
-    "static/js/main.c077c749.js"
+    "static/js/main.d1069086.js"
   ]
 }
