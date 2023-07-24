@@ -11,7 +11,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
 import AvatarComp from './avatar/AvatarComp';
 import BackgroundComp from './background/BackgroundComp';
-
+import CVfile from "./Mattia Olia.pdf"
+import { Document, Page, pdfjs } from 'react-pdf';
 
  function Hero() {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
@@ -24,6 +25,23 @@ import BackgroundComp from './background/BackgroundComp';
   useEffect(() => {
     setZoomed(()=>!zoomed);
   }, []);
+
+  const pdfUrl = CVfile;
+
+  // Inizializza react-pdf
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+  
+    const downloadPDF = () => {
+      // Crea un link temporaneo per il download del PDF
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.target = '_blank';
+      link.download = 'Mattia Olia CV.pdf'; // Nome con cui verrà scaricato il file
+      link.click();
+    };
+  
+  
+  
 
     
 
@@ -56,11 +74,11 @@ Want to get in touch about a project? Send me a message at :
         '&:hover': {
           textDecoration: "underline"}}}>mattiaolia97@gmail.com</Typography></a>
                                   <Box alignItems={'center'} display={'flex'}>
-                                  <Button variant="contained" color="primary">Download CV</Button>
+                                  <Button variant="contained" color="primary" onClick={downloadPDF}>Download CV</Button>
                                   <IconButton
                   color="primary"
                   component="a"
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/mattiaolia/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -69,7 +87,7 @@ Want to get in touch about a project? Send me a message at :
                 <IconButton
                   color="primary"
                   component="a"
-                  href="https://github.com/"
+                  href="https://github.com/MattiaOlia"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -120,7 +138,7 @@ Want to get in touch about a project? Send me a message at:
     <IconButton
                   color="primary"
                   component="a"
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/mattiaolia/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -129,7 +147,7 @@ Want to get in touch about a project? Send me a message at:
                 <IconButton
                   color="primary"
                   component="a"
-                  href="https://github.com/"
+                  href="https://github.com/MattiaOlia"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -145,6 +163,7 @@ Want to get in touch about a project? Send me a message at:
         
     )
 }
+ 
 
 export default Hero;
 

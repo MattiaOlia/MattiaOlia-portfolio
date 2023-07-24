@@ -98,7 +98,7 @@ export function Contact() {
 
                color= "black"
                component="a"
-               href="https://www.linkedin.com/"
+               href="https://www.linkedin.com/in/mattiaolia/"
                target="_blank"
                rel="noopener noreferrer"
                >
@@ -109,7 +109,7 @@ export function Contact() {
              <IconButton
                color="black"
                component="a"
-               href="https://github.com/"
+               href="https://github.com/MattiaOlia"
                target="_blank"
                rel="noopener noreferrer"
              >
@@ -190,7 +190,7 @@ export function Contact() {
 
                 color= "black"
                 component="a"
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/mattiaolia/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
@@ -201,7 +201,7 @@ export function Contact() {
               <IconButton
                 color="black"
                 component="a"
-                href="https://github.com/"
+                href="https://github.com/MattiaOlia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
