@@ -23,7 +23,7 @@ function BackgroundComp() {
     top: -100,
     right: -500,
     width:  '150%',
-    height: '150%',
+    height: '130%',
     zIndex: -1
   };
 

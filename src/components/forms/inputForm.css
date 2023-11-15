@@ -1,0 +1,27 @@
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border-color: rgb(0 0 0 / 0%);
+}
+   
+    
+.customBorder{
+    /*border: solid blue;*/
+  padding: 0.9em 0;
+  background-image: url('../../images/borderInput.svg');
+  background-size: cover; /* or 'contain' depending on your preference */
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 140%;
+  
+}
+
+#custom-input{
+    border-color: blueviolet;
+}
+
+.say-hello{
+    background-image: url(../../images/SayHI.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    transform: translateY(-80px);
+
+}

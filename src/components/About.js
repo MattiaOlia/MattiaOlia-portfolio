@@ -33,7 +33,7 @@ export function About() {
       <div ref={aboutRef} id="about">
         {isLargeScreen ? (
           <Fade in={isVisible} timeout={1000}>
-            <Box>
+            <Box backgroundColor= 'rgba(235, 166, 4, 0.68)'>
               <Typography variant={isSmallScreen ? 'h2' : 'h1'} fontWeight={400}>
                 About Me
               </Typography>

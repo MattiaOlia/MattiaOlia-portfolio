@@ -14,6 +14,8 @@ import BackgroundComp from './background/BackgroundComp';
 import CVfile from "./Mattia Olia CV.pdf"
 import { Document, Page, pdfjs } from 'react-pdf';
 
+import HeroInput from './forms/HeroInput';
+
  function Hero() {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
     const isMediumScreen = useMediaQuery('(min-width: 601px) and (max-width: 1200px)');
@@ -102,7 +104,7 @@ Want to get in touch about a project? Send me a message at :
   justifyContent="center"
   textAlign="left"
   pl={isLargeScreen ? "5em" : "0"}
-  margin={isLargeScreen ? "8em auto" : "5em auto"}
+  margin={isLargeScreen ? "5em auto" : "5em auto"}
 >
   <Box flexShrink={0} className="image-container" sx={{ marginLeft: isLargeScreen ? "auto 6em" : "auto 2em", width: isLargeScreen ? "300px" : "200px" ,
           height: isLargeScreen ? "270px" : "200px" , overflow: "hidden" }}>
@@ -115,7 +117,7 @@ Want to get in touch about a project? Send me a message at :
       <AvatarComp /></Box>
   </Box>
   <Box flexGrow={1} pl={3}  sx={{marginLeft: isLargeScreen ? "2em" : "1.5Cem", paddingRight : isLargeScreen ? "6em" : "2em"}} display={'flex'} flexDirection={"column"} gap={2} >
-    <Typography variant={isLargeScreen ? "h1": "h4"} fontWeight={isLargeScreen ? 500 : 400 }>
+    <Typography variant={isLargeScreen ? "h2": "h4"} fontWeight={isLargeScreen ? 600 : 400 }>
       Hi, I am Mattia, <br />
       Front-End Developer
     </Typography>
@@ -126,34 +128,14 @@ Want to get in touch about a project? Send me a message at :
 Want to get in touch about a project? Send me a message at:
     </Typography>
   
-    <a style={{color:"green" }} href="mailto:mattiaolia97@gmail.com">
+   {/*} <a style={{color:"green" }} href="mailto:mattiaolia97@gmail.com">
      <Typography variant="h5" fontWeight={600} sx={{transition: 'fade in 0.3s ease',
         '&:hover': {
-          textDecoration: "underline"}}}>mattiaolia97@gmail.com</Typography></a>
+        textDecoration: "underline"}}}>mattiaolia97@gmail.com</Typography></a>*/}
 
-    <Box display={'flex'} alignItems={'center'} gap={"1.5em"}>
-    <Button onClick={downloadPDF} variant="contained" color="primary" sx={{ width: 'fit-content' }}>
-      Download CV
-    </Button>
-    <IconButton
-                  color="primary"
-                  component="a"
-                  href="https://www.linkedin.com/in/mattiaolia/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkedInIcon sx={{ fontSize: "3rem" }} />
-                </IconButton>
-                <IconButton
-                  color="primary"
-                  component="a"
-                  href="https://github.com/MattiaOlia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GitHubIcon sx={{ fontSize: "3rem" }} />
-                </IconButton>
-                </Box>
+  
+                <HeroInput />
+               
   </Box>
 </Box>
       )}    
