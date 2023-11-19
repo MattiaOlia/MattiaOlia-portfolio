@@ -38,14 +38,17 @@ const InputForm = () => {
     </Box>
     
     <Button
+    
   component="a"
   href="https://github.com/MattiaOlia"
   target="_blank"
   rel="noopener noreferrer"
   sx={{
+    borderRadius:"75%",
     position: "relative",
     overflow: "hidden",
     maxHeight: "100px",
+    width:"20%",
     transform: "translateX(0px)",
     '& img': {
       width: '100%',
@@ -84,9 +87,9 @@ const InputForm = () => {
           
 </Box>
     </FormControl>
-    <Box  maxHeight={"80px"}>
+   {/*<Box  maxHeight={"80px"}>
     <Arrow />
-    </Box>
+</Box>*/}
     </Box>
   );
 };

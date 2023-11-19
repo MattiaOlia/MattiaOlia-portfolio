@@ -1,4 +1,4 @@
-import  {React,useRef,useState,useEffect} from 'react'
+import  {React,useRef,useState,useEffect,Suspense} from 'react'
 import theme from "../theme"
 import { ThemeProvider } from '@emotion/react';
 import { Typography } from '@mui/material';
@@ -9,14 +9,17 @@ import "./Hero.css"
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
-import AvatarComp from './avatar/AvatarComp';
+
 import BackgroundComp from './background/BackgroundComp';
 import CVfile from "./Mattia Olia CV.pdf"
 import { Document, Page, pdfjs } from 'react-pdf';
 
 import HeroInput from './forms/HeroInput';
+import AvatarComp from '../components/avatar/AvatarComp'
 
  function Hero() {
+
+    
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
     const isMediumScreen = useMediaQuery('(min-width: 601px) and (max-width: 1200px)');
     const isLargeScreen = useMediaQuery('(min-width: 1200px)');
@@ -60,7 +63,8 @@ import HeroInput from './forms/HeroInput';
                             
                             <Box className="image-container" mt= {"-5em"}>
                                {/*<img src={imageHero} alt="Hero" />*/}
-                               <AvatarComp />
+                              {/*<AvatarComp  />*/}
+                              
                                </Box>
                                   <Typography variant="h4" fontWeight={600}>
                                   Hi, I am Mattia, <br/>
@@ -104,17 +108,21 @@ Want to get in touch about a project? Send me a message at :
   justifyContent="center"
   textAlign="left"
   pl={isLargeScreen ? "5em" : "0"}
-  margin={isLargeScreen ? "5em auto" : "5em auto"}
+  marginTop={isLargeScreen ? "5em" : "5em"}
+
 >
   <Box flexShrink={0} className="image-container" sx={{ marginLeft: isLargeScreen ? "auto 6em" : "auto 2em", width: isLargeScreen ? "300px" : "200px" ,
-          height: isLargeScreen ? "270px" : "200px" , overflow: "hidden" }}>
+          height: isLargeScreen ? "250px" : "200px" , overflow: "hidden" }}>
     <Box sx={{
           width: '100%',
           transition: 'all 5s ease',
-          transform: zoomed ? 'scale(1.4)' : 'scale(1)'
-           
+          transform: `scale(${zoomed ? 1.4 : 1}) translateY(-100px)`,
+           border:"solid red"
         }}>
-      <AvatarComp /></Box>
+      <Suspense fallback={<div>Loading...</div>}>
+      <AvatarComp/>
+      </Suspense> 
+    </Box>
   </Box>
   <Box flexGrow={1} pl={3}  sx={{marginLeft: isLargeScreen ? "2em" : "1.5Cem", paddingRight : isLargeScreen ? "6em" : "2em"}} display={'flex'} flexDirection={"column"} gap={2} >
     <Typography variant={isLargeScreen ? "h2": "h4"} fontWeight={isLargeScreen ? 600 : 400 }>

@@ -6,25 +6,32 @@ import "./inputForm.css"
 import Grid from '@mui/material/Grid';
 import Arrow from '../arrow/Arrow'
 import { Button } from '@mui/material';
-
+import { Application } from '@splinetool/runtime';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
-
+import Spline from '@splinetool/react-spline';
 import { Document, Page, pdfjs } from 'react-pdf';
+import { useEffect } from 'react'
+import Pencil3D from './Pencil3D'
 
 const HeroInput = () => {
+ 
+
+
   return (
     
     <Box sx={{ flexGrow: 1 }}>
-    <Grid container spacing={2}>
-      <Grid item xs={12}>
+    <Box border={"solid"} display={"flex"} sx={{ zIndex: "5 !important", position: "relative" }} width={"50%"}>
+    <Grid container spacing={6} >
+      <Grid item xs={8}>
       
-        <Box >
+        <Box border={"solid"}>
         <InputForm />
+      
     </Box>
       </Grid>
-      <Grid item xs={8}>
+      <Grid item xs={12}>
       <Box display={'flex'} alignItems={'center'} gap={"1.5em"} >
     <Button  variant="contained" color="primary" sx={{ width: 'fit-content' }}>
       Download CV
@@ -49,14 +56,17 @@ const HeroInput = () => {
                 </IconButton>
                 </Box>
       </Grid>
-      <Grid item xs={4}>
-        <Box width={"100%"} className={"say-hello"} height={"250px"}>
-            
-        </Box>
-      </Grid>
     </Grid>
+   
+    </Box>
+    <Box>
+      <Pencil3D />
+    </Box>
   </Box>
   )
 }
 
 export default HeroInput
+
+
+
