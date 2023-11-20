@@ -7,11 +7,11 @@ export default function Pencil3D() {
     <div
     border={"solid"}
     
-    style={{ transform: "translateY(-300px) translateX(250px)", zIndex: 0, position: "relative",height:"50vh", width:"90%" }}
+    style={{transform: "translateY(0) translateX(0px)",overflow:"visible" , zIndex: 0,position: "relative",height:"60vh", width:"100%", minWidth:"500px"}}
     
   >
     <Suspense fallback={<div>Loading...</div>}>
-      <Spline sx={{ zIndex: 0, position: "relative" }} scene="https://prod.spline.design/Z48vmifrvpoOCNbG/scene.splinecode" />
+      <Spline sx={{ zIndex: 0, position: "relative"}} scene="https://prod.spline.design/Z48vmifrvpoOCNbG/scene.splinecode" />
     </Suspense>
   </div>
 );

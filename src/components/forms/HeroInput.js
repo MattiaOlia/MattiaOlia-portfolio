@@ -13,7 +13,7 @@ import { IconButton } from '@mui/material';
 import Spline from '@splinetool/react-spline';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useEffect } from 'react'
-import Pencil3D from './Pencil3D'
+
 
 const HeroInput = () => {
  
@@ -22,11 +22,11 @@ const HeroInput = () => {
   return (
     
     <Box sx={{ flexGrow: 1 }}>
-    <Box border={"solid"} display={"flex"} sx={{ zIndex: "5 !important", position: "relative" }} width={"50%"}>
+    <Box  display={"flex"} sx={{ zIndex: "5 !important", position: "relative" }} width={"100%"}>
     <Grid container spacing={6} >
-      <Grid item xs={8}>
+      <Grid item xs={12}>
       
-        <Box border={"solid"}>
+        <Box>
         <InputForm />
       
     </Box>
@@ -59,9 +59,7 @@ const HeroInput = () => {
     </Grid>
    
     </Box>
-    <Box>
-      <Pencil3D />
-    </Box>
+    
   </Box>
   )
 }
