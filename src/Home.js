@@ -29,6 +29,7 @@ function Home() {
         <Router>
           
           <Navbar />
+          <Box maxWidth={"1600px"} display="flex" margin={"auto"} overflow={""}>
           <InView onChange={(inView, entry) => setIsVisible(inView)}>
           <Fade in={isVisible} timeout={1000}>
           <Box
@@ -54,6 +55,7 @@ function Home() {
       </Box>
       </Fade>
       </InView>
+      </Box>
     </Router>
     </div>
   );

@@ -7,7 +7,7 @@ export default function Pencil3D() {
     <div
     border={"solid"}
     
-    style={{transform: "translateY(0) translateX(0px)",overflow:"visible" , zIndex: 0,position: "relative",height:"60vh", width:"100%", minWidth:"500px"}}
+    style={{transform: "translateY(0) translateX(0px)",overflow:"visible" , zIndex: 0,position: "relative",height:"500px", width:"100%", minWidth:"500px"}}
     
   >
     <Suspense fallback={<div>Loading...</div>}>

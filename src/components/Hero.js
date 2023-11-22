@@ -14,7 +14,7 @@ import AvatarComp from '../components/avatar/AvatarComp';
 
 function Hero() {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
-  const isLargeScreen = useMediaQuery('(min-width: 1200px)');
+  const isLargeScreen = useMediaQuery('(min-width: 1350px)');
   const [zoomed, setZoomed] = useState(false);
   const pdfUrl = CVfile;
 
@@ -38,74 +38,31 @@ function Hero() {
         display={isSmallScreen ? 'block' : 'flex'}
         alignItems={isSmallScreen ? 'center' : 'flex-start'}
         justifyContent={isSmallScreen ? 'center' : 'flex-end'}
-        p={3}
+        maxHeight={"700px"}
+        border={"solid red"}
+        maxWidth={"1400px"}
+        margin={"0 auto"}
       >
         {isSmallScreen ? (
-          <Box minHeight={"100vh"} display={"flex"} flexDirection={"column"} alignItems={'center'} gap={1} justifyContent={"center"}>
-            <Box className="image-container" mt={"-5em"}>
-              {/*<img src={imageHero} alt="Hero" />*/}
-              {/*<AvatarComp  />*/}
-            </Box>
-            <Typography variant="h4" fontWeight={600}>
-              Hi, I am Mattia, <br />
-              Front-end developer
-            </Typography>
-            <Typography variant="body1">
-              I focus on the development of web applications, something that I enjoy exploring and learning more about every day.
-              Always looking to connect!<br />
-              Want to get in touch about a project? Send me a message at:
-            </Typography>
-            <a style={{ color: "green" }} href="mailto:mattiaolia97@gmail.com">
-              <Typography variant="h6" fontWeight={600} sx={{ transition: 'fade in 0.3s ease', '&:hover': { textDecoration: "underline" } }}>mattiaolia97@gmail.com</Typography>
-            </a>
-            <Box alignItems={'center'} display={'flex'}>
-              <Button variant="contained" color="primary" onClick={downloadPDF}>Download CV</Button>
-              <IconButton
-                color="primary"
-                component="a"
-                href="https://www.linkedin.com/in/mattiaolia/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon sx={{ fontSize: "3rem" }} />
-              </IconButton>
-              <IconButton
-                color="primary"
-                component="a"
-                href="https://github.com/MattiaOlia"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon sx={{ fontSize: "3rem" }} />
-              </IconButton>
-            </Box>
-          </Box>
-        ) : (
-          <Box
-            display="flex"
-            alignItems={"center"}
-            justifyContent="center"
-            textAlign="left"
-            pl={isLargeScreen ? "5em" : "0"}
-            marginTop={isLargeScreen ? "5em" : "5em"}
-          >
-            <Box
+           <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"} alignItems={'center'} gap={1} justifyContent={"center"} mt={8}>
+           <Box
               flexShrink={0}
               className="image-container"
               sx={{
-                marginLeft: isLargeScreen ? "auto 6em" : "auto 2em",
-                width: isLargeScreen ? "270px" : "200px",
-                height: isLargeScreen ? "270px" : "200px",
+                width: isLargeScreen ? "270px" : "230px",
+                height: isLargeScreen ? "300px" : "230px",
                 overflow: "hidden",
                 backgroundSize: "cover"
+        
               }}
+            
             >
               <Box
                 sx={{
                   width: '100%',
                   transition: 'all 5s ease',
                   transform: `scale(${zoomed ? 1.4 : 1})`,
-                  height:"100%",
+                  height:"90%",
                 }}
               >
                 <Suspense fallback={<div>Loading...</div>}>
@@ -113,30 +70,126 @@ function Hero() {
                 </Suspense>
               </Box>
             </Box>
-            <Box flexGrow={1} pl={3} sx={{ marginLeft: isLargeScreen ? "2em" : "1.5Cem", paddingRight: isLargeScreen ? "6em" : "2em" }} display={'flex'} flexDirection={"column"} gap={2}>
+           <Typography variant="h4" fontWeight={600}>
+             Hi, I am Mattia, <br />
+             Front-end developer
+           </Typography>
+           <Typography variant="body1">
+             I focus on the development of web applications, something that I enjoy exploring and learning more about every day.
+             Always looking to connect!<br />
+             Want to get in touch about a project? 
+           </Typography>
+           <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
+      <HeroInput />
+</Box>
+         
+         </Box>
+          
+        ) : isLargeScreen ? (
+          // Code for large screens
+          <Box
+            display="flex"
+            alignItems={"center"}
+            justifyContent="center"
+            textAlign="left"
+            pl={isLargeScreen ? "1em" : "0"}
+            marginTop="5em"
+          >
+            <Box
+              flexShrink={0}
+              className="image-container"
+              sx={{
+                width: isLargeScreen ? "270px" : "200px",
+                height: isLargeScreen ? "300px" : "200px",
+                overflow: "hidden",
+                backgroundSize: "cover",
+                transform: "translateY(-100px)"
+              }}
+              border={"solid blu"}
+            >
+              <Box
+                sx={{
+                  width: '100%',
+                  transition: 'all 5s ease',
+                  transform: `scale(${zoomed ? 1.4 : 1})`,
+                  height:"90%",
+                }}
+              >
+                <Suspense fallback={<div>Loading...</div>}>
+                  <AvatarComp />
+                </Suspense>
+              </Box>
+            </Box>
+            <Box border={"solid red"} flexGrow={1} pl={3} sx={{ marginLeft: isLargeScreen ? "2em" : "1em"}} display={'flex'} flexDirection={"column"} >
               <Typography variant={isLargeScreen ? "h2" : "h4"} fontWeight={isLargeScreen ? 600 : 400}>
                 Hi, I am Mattia, <br />
                 Front-End Developer
               </Typography>
               <Typography variant="h6">
-                I focus on the development of web applications, something that I enjoy exploring and learning more about every day.
+                I focus on the development of web applications, <br/> something that I enjoy exploring and learning more about every day.<br/>
                 Always looking to connect!<br />
                 Want to get in touch about a project? Send me a message at:
               </Typography>
-              {/*} <a style={{color:"green" }} href="mailto:mattiaolia97@gmail.com">
-                 <Typography variant="h5" fontWeight={600} sx={{transition: 'fade in 0.3s ease',
-                    '&:hover': {
-                    textDecoration: "underline"}}}>mattiaolia97@gmail.com</Typography></a>*/}
-              <Box display={"flex"} width={"100%"} >
+              <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
                 <HeroInput />
-                <Box width={"100%"}  sx={{transform: "translateY(-150px) translateX(0px)" }}>
+                <Box border={"solid"} width={"100%"}  sx={{transform: "translateY(-190px) translateX(-70px)" }}>
                   <Pencil3D />
                 </Box>
-                
               </Box>
             </Box>
           </Box>
-        )}
+        ) :
+        <Box>
+        <Box
+        display="flex"
+        alignItems={"center"}
+        justifyContent="center"
+        textAlign="left"
+        mt={"3em"}
+        border={"solid green"}
+        width={"100%"}
+      >
+        <Box
+          flexShrink={0}
+          className="image-container"
+          sx={{
+            width: "250px",
+            height: "250px",
+            overflow: "hidden",
+            backgroundSize: "cover",
+            
+          }}
+          border={"solid blu"}
+        >
+        <Box
+          sx={{
+            width: '100%',
+            transition: 'all 5s ease',
+            transform: `scale(${zoomed ? 1.4 : 1})`,
+            height:"90%",
+          }}
+        >
+          <Suspense fallback={<div>Loading...</div>}>
+            <AvatarComp />
+          </Suspense>
+        </Box>
+      </Box>
+      <Box border={"solid red"} flexGrow={1} p={2}  display={'flex'} flexDirection={"column"} >
+              <Typography variant="h4" fontWeight={500}>
+                Hi, I am Mattia, <br />
+                Front-End Developer
+              </Typography>
+              <Typography variant="h6">
+                I focus on the development of web applications, <br/> something that I enjoy exploring and learning more about every day.<br/>
+                Always looking to connect!<br />
+                Want to get in touch about a project? Send me a message at:
+              </Typography>
+      </Box>
+      
+      </Box>
+      <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
+      <HeroInput />
+</Box></Box>}
         {isLargeScreen && <BackgroundComp />}
       </Box>
     </ThemeProvider>

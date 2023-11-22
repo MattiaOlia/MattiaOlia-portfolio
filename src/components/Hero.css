@@ -1,12 +1,14 @@
 .image-container {
     display: flex;
     width: 400px; 
-    height: 250px; 
+    height: 400px; 
     overflow: hidden;
+    transform: translateY("-200px");
   }
   
   .image-container img {
     width: 100%; 
     height: 100%; 
-    object-fit: cover
+    object-fit: cover;
+    transform: translateY("-200px");
   }

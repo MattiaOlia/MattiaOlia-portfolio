@@ -13,9 +13,8 @@ import { IconButton } from '@mui/material';
 import { WidthFull } from '@mui/icons-material';
 import arrowButton from "../../images/arrowButton.svg"
 import { Button } from "@mui/material"
-import arrowButtonHover from "../../images/arrowButtonHover.svg"
-import Arrow from '../arrow/Arrow';
 
+import SendIcon from '@mui/icons-material/Send';
 const InputForm = () => { 
   const [isHovered, setHovered] = useState(false);
 
@@ -30,61 +29,26 @@ const InputForm = () => {
   return (
     <Box display={"flex"} justifyContent={"space-between"} >
     <FormControl >
-      <Box display={"flex"}  paddingRight={"2em"} width={"100%"} >
+      <Box display={"flex"} width={"100%"} alignItems={"center"} gap={2} >
       <Box className={"customBorder"}>
       <OutlinedInput sx={{minWidth:"380px"}}
         id="custom-input"
       />
     </Box>
-    
-    <Button
-    
-  component="a"
-  href="https://github.com/MattiaOlia"
-  target="_blank"
-  rel="noopener noreferrer"
-  sx={{
-    borderRadius:"75%",
-    position: "relative",
-    overflow: "hidden",
-    maxHeight: "100px",
-    width:"20%",
-    transform: "translateX(0px)",
-    '& img': {
-      width: '100%',
-      height: '100%',
-      transition: '0.2s ease',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      opacity: 1
-    },
-    '& img:nth-child(1)': {
-      zIndex: 2,
-    },
-    '& img:nth-child(2)': {
-      zIndex: 1,
-      opacity: 0,
-    },
-    '&:hover img:nth-child(1)': {
-      opacity: 0,
-    },
-    '&:hover img:nth-child(2)': {
-      opacity: 1,
-    },
-    '&:hover': {
-      '& img:nth-child(2)': {
-        opacity: 1,
-      },
-    },
-  }}
->
- 
-      <img src={arrowButtonHover} alt="Original Image" />
-      <img src={arrowButton} alt="Hovered Image" />
-    </Button>
-       
-          
+    <Box>   
+    <IconButton
+                  color="primary"
+                  component="a"
+                  href="https://github.com/MattiaOlia"
+                  target="_blank"
+                  sx={{
+                    '&:hover': {
+                      borderRadius: '50%'
+                    }}}
+                >
+                  <SendIcon sx={{fontSize: "3rem" }} />
+     </IconButton>
+     </Box>     
 </Box>
     </FormControl>
    {/*<Box  maxHeight={"80px"}>

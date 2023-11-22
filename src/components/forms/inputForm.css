@@ -10,7 +10,7 @@
   background-size: cover; /* or 'contain' depending on your preference */
   background-position: left center;
   background-repeat: no-repeat;
-  width: 140%;
+  width: 80%;
   min-width: fit-content;
 }
 

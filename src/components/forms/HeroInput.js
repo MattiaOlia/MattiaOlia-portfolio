@@ -13,26 +13,25 @@ import { IconButton } from '@mui/material';
 import Spline from '@splinetool/react-spline';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useEffect } from 'react'
-
+import { useMediaQuery } from '@mui/material';
 
 const HeroInput = () => {
- 
-
+   
+  const isSmallScreen = useMediaQuery('(max-width: 600px)');
+  const isLargeScreen = useMediaQuery('(min-width: 1350px)');
 
   return (
     
     <Box sx={{ flexGrow: 1 }}>
-    <Box  display={"flex"} sx={{ zIndex: "5 !important", position: "relative" }} width={"100%"}>
-    <Grid container spacing={6} >
-      <Grid item xs={12}>
+    <Box sx={{ zIndex: "5 !important", position: "relative" }} width={"100%"}  display={"flex"} justifyContent={"center"}>
+    
       
-        <Box>
-        <InputForm />
       
-    </Box>
-      </Grid>
-      <Grid item xs={12}>
-      <Box display={'flex'} alignItems={'center'} gap={"1.5em"} >
+        <Box>  
+         <InputForm />
+    
+      
+      <Box display={'flex'} alignItems={'center'} gap={"1.5em"} justifyContent={"center"} >
     <Button  variant="contained" color="primary" sx={{ width: 'fit-content' }}>
       Download CV
     </Button>
@@ -55,11 +54,8 @@ const HeroInput = () => {
                   <GitHubIcon sx={{ fontSize: "3rem" }} />
                 </IconButton>
                 </Box>
-      </Grid>
-    </Grid>
-   
-    </Box>
-    
+                </Box>
+     </Box>
   </Box>
   )
 }
