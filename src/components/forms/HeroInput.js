@@ -10,9 +10,7 @@ import { Application } from '@splinetool/runtime';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
-import Spline from '@splinetool/react-spline';
-import { Document, Page, pdfjs } from 'react-pdf';
-import { useEffect } from 'react'
+
 import { useMediaQuery } from '@mui/material';
 
 const HeroInput = () => {
@@ -23,7 +21,7 @@ const HeroInput = () => {
   return (
     
     <Box sx={{ flexGrow: 1 }}>
-    <Box sx={{ zIndex: "5 !important", position: "relative" }} width={"100%"}  display={"flex"} justifyContent={"center"}>
+    <Box sx={{ zIndex: "3 !important", position: "relative" }} width={"100%"}  display={"flex"} justifyContent={"center"}>
     
       
       
@@ -31,7 +29,7 @@ const HeroInput = () => {
          <InputForm />
     
       
-      <Box display={'flex'} alignItems={'center'} gap={"1.5em"} justifyContent={"center"} >
+      <Box display={'flex'} alignItems={'center'} gap={"1.5em"} justifyContent={isLargeScreen ? "" : "center"} >
     <Button  variant="contained" color="primary" sx={{ width: 'fit-content' }}>
       Download CV
     </Button>

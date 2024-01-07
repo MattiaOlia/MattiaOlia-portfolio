@@ -39,7 +39,7 @@ export function Contact() {
       <div ref={contactRef} id="contact">
         {isLargeScreen ? (
         <Fade in={isVisible} timeout={1000}>
-          <Box bgcolor={theme.palette.primary.secondary}  color={"white"} display={"flex"} flexDirection={"column"} p={2}>
+          <Box bgcolor={"#2c9934"}  color={"white"} display={"flex"} flexDirection={"column"} p={2}>
          
          <Box display={"flex"} sx={{width:"100%"}} justifyContent={"center"} gap={5} m={1} >
          <Box display="flex"  justifyContent="left" sx={{ padding: '2em',paddingTop:'0', textAlign:"left" }} flexDirection="column" alignItems="center" >
@@ -211,7 +211,7 @@ export function Contact() {
               </IconButton>
             </Box>
           </Box>
-          <Box m={2}>
+          <Box m={2} alignSelf={"center"}>
           <Typography variant='body1'>Feel free to get in touch if you have any questions or inquiries.</Typography>
   <Typography>You can email me at:<br/></Typography> <a style={{textDecoration: "underline", color:"darkgreen" }} href="mailto:mattiaolia97@gmail.com">
      <Typography sx={{transition: 'fade in 0.3s ease',

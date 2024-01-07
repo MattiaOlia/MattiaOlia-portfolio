@@ -63,7 +63,7 @@ function Navbar() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" style={{zIndex:5}}>
         {isSmallScreen ? (
           <Toolbar position={"fixed"}>
             <Box display={"flex"} justifyContent={"space-between"} sx={{width:"100%"}} alignItems={"center"}>
@@ -89,7 +89,7 @@ function Navbar() {
               style={{ textDecoration: 'none', color: 'inherit',cursor:"pointer" }}
               offset={-70}
             >
-                Projects
+                Work
                 </ScrollLink>
               </MenuItem>
 
@@ -185,7 +185,7 @@ function Navbar() {
                   style={{ textDecoration: 'none', color: 'inherit', cursor:"pointer" }}
                   offset={-100}
                 >
-                  Projects
+                  Work
                 </ScrollLink>
               </Typography>
               
@@ -215,7 +215,7 @@ function Navbar() {
                   duration={500}
                   spy={true}
                   activeClass="active"
-                  style={{ textDecoration: 'none', color: 'inherit',cursor:"pointer" }}
+                   style={{ textDecoration: 'none', color: 'inherit',cursor:"pointer" }}
                   
                 >
                   Contact

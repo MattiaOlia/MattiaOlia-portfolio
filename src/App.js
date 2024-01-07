@@ -1,17 +1,19 @@
-
+import React, { useState, useEffect } from "react";
 import './App.css';
 import Home from './Home';
 import 'typeface-heebo'
+import HeroAnimationAvatar from './components/HeroAnimationAvatar';
 
+const App = () => {
+  
 
-function App() {
   return (
-    <div className="App">
-      <Home />
+    <div>
+     <HeroAnimationAvatar />
+     <Home />
     </div>
   );
-}
+};
+
 
 export default App;
-
-///* finire il footer, aggiustare navbatr

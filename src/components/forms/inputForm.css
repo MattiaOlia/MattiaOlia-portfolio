@@ -5,13 +5,19 @@
     
 .customBorder{
     /*border: solid blue;*/
-  padding: 0.9em 0;
+  padding: 0.35em 0;
   background-image: url('../../images/borderInput.svg');
   background-size: cover; /* or 'contain' depending on your preference */
   background-position: left center;
   background-repeat: no-repeat;
   width: 80%;
   min-width: fit-content;
+}
+
+@media only screen and (min-width: 600px){
+    .customBorder{
+        padding: 0.82em 0;
+    }
 }
 
 #custom-input{

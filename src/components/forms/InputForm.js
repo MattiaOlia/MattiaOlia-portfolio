@@ -13,11 +13,12 @@ import { IconButton } from '@mui/material';
 import { WidthFull } from '@mui/icons-material';
 import arrowButton from "../../images/arrowButton.svg"
 import { Button } from "@mui/material"
+import { useMediaQuery } from '@mui/material';
 
 import SendIcon from '@mui/icons-material/Send';
 const InputForm = () => { 
   const [isHovered, setHovered] = useState(false);
-
+  const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const handleMouseEnter = () => {
     setHovered(true);
   };
@@ -31,7 +32,7 @@ const InputForm = () => {
     <FormControl >
       <Box display={"flex"} width={"100%"} alignItems={"center"} gap={2} >
       <Box className={"customBorder"}>
-      <OutlinedInput sx={{minWidth:"380px"}}
+      <OutlinedInput sx={{ minWidth: isSmallScreen ? "300px" : "370px"}}
         id="custom-input"
       />
     </Box>

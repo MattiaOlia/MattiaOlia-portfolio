@@ -11,16 +11,19 @@ import { pdfjs } from 'react-pdf';
 import Pencil3D from './forms/Pencil3D';
 import HeroInput from './forms/HeroInput';
 import AvatarComp from '../components/avatar/AvatarComp';
+import { motion } from 'framer-motion';
 
 function Hero() {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
-  const isLargeScreen = useMediaQuery('(min-width: 1350px)');
+  const isLargeScreen = useMediaQuery('(min-width: 1200px)');
   const [zoomed, setZoomed] = useState(false);
   const pdfUrl = CVfile;
 
   useEffect(() => {
     setZoomed(!zoomed);
   }, []);
+
+  
 
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -34,51 +37,34 @@ function Hero() {
 
   return (
     <ThemeProvider theme={theme}>
+      
       <Box
-        display={isSmallScreen ? 'block' : 'flex'}
-        alignItems={isSmallScreen ? 'center' : 'flex-start'}
-        justifyContent={isSmallScreen ? 'center' : 'flex-end'}
+        display={isLargeScreen ? 'block' : 'flex'}
+        alignItems={isLargeScreen ? 'center' : 'flex-start'}
+        justifyContent={"center"}
         maxHeight={"700px"}
-        border={"solid red"}
+        border={"solid green"}
         maxWidth={"1400px"}
         margin={"0 auto"}
+        
       >
+
         {isSmallScreen ? (
            <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"} alignItems={'center'} gap={1} justifyContent={"center"} mt={8}>
-           <Box
-              flexShrink={0}
-              className="image-container"
-              sx={{
-                width: isLargeScreen ? "270px" : "230px",
-                height: isLargeScreen ? "300px" : "230px",
-                overflow: "hidden",
-                backgroundSize: "cover"
-        
-              }}
-            
-            >
-              <Box
-                sx={{
-                  width: '100%',
-                  transition: 'all 5s ease',
-                  transform: `scale(${zoomed ? 1.4 : 1})`,
-                  height:"90%",
-                }}
-              >
-                <Suspense fallback={<div>Loading...</div>}>
-                  <AvatarComp />
-                </Suspense>
-              </Box>
-            </Box>
-           <Typography variant="h4" fontWeight={600}>
+           
+           <Box border={" solid green"} sx={{padding:"3em 1em"}}>
+           
+           <Typography variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>
              Hi, I am Mattia, <br />
              Front-end developer
            </Typography>
-           <Typography variant="body1">
+           
+           <Typography variant="body1" mt={2}>
              I focus on the development of web applications, something that I enjoy exploring and learning more about every day.
              Always looking to connect!<br />
              Want to get in touch about a project? 
            </Typography>
+           </Box>
            <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
       <HeroInput />
 </Box>
@@ -92,35 +78,11 @@ function Hero() {
             alignItems={"center"}
             justifyContent="center"
             textAlign="left"
-            pl={isLargeScreen ? "1em" : "0"}
-            marginTop="5em"
+            pl={isLargeScreen ? "7em" : "0"}
+            marginTop="7em"
           >
-            <Box
-              flexShrink={0}
-              className="image-container"
-              sx={{
-                width: isLargeScreen ? "270px" : "200px",
-                height: isLargeScreen ? "300px" : "200px",
-                overflow: "hidden",
-                backgroundSize: "cover",
-                transform: "translateY(-100px)"
-              }}
-              border={"solid blu"}
-            >
-              <Box
-                sx={{
-                  width: '100%',
-                  transition: 'all 5s ease',
-                  transform: `scale(${zoomed ? 1.4 : 1})`,
-                  height:"90%",
-                }}
-              >
-                <Suspense fallback={<div>Loading...</div>}>
-                  <AvatarComp />
-                </Suspense>
-              </Box>
-            </Box>
-            <Box border={"solid red"} flexGrow={1} pl={3} sx={{ marginLeft: isLargeScreen ? "2em" : "1em"}} display={'flex'} flexDirection={"column"} >
+            
+            <Box flexGrow={1} pl={3} sx={{ marginLeft: isLargeScreen ? "2em" : "1em"}} display={'flex'} flexDirection={"column"} >
               <Typography variant={isLargeScreen ? "h2" : "h4"} fontWeight={isLargeScreen ? 600 : 400}>
                 Hi, I am Mattia, <br />
                 Front-End Developer
@@ -130,52 +92,29 @@ function Hero() {
                 Always looking to connect!<br />
                 Want to get in touch about a project? Send me a message at:
               </Typography>
-              <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
+              <Box display={"flex"} width={"100%"}flexGrow={1}>
                 <HeroInput />
-                <Box border={"solid"} width={"100%"}  sx={{transform: "translateY(-190px) translateX(-70px)" }}>
+                <Box  width={"100%"}  sx={{transform: "translateY(-190px) translateX(-70px)" }}>
                   <Pencil3D />
                 </Box>
               </Box>
             </Box>
           </Box>
         ) :
-        <Box>
+        <Box minHeight={"100vh"}  mt={"6em"}>
         <Box
         display="flex"
         alignItems={"center"}
-        justifyContent="center"
+        justifyContent={"center"}
         textAlign="left"
-        mt={"3em"}
-        border={"solid green"}
+       
+       
         width={"100%"}
+        
       >
-        <Box
-          flexShrink={0}
-          className="image-container"
-          sx={{
-            width: "250px",
-            height: "250px",
-            overflow: "hidden",
-            backgroundSize: "cover",
-            
-          }}
-          border={"solid blu"}
-        >
-        <Box
-          sx={{
-            width: '100%',
-            transition: 'all 5s ease',
-            transform: `scale(${zoomed ? 1.4 : 1})`,
-            height:"90%",
-          }}
-        >
-          <Suspense fallback={<div>Loading...</div>}>
-            <AvatarComp />
-          </Suspense>
-        </Box>
-      </Box>
-      <Box border={"solid red"} flexGrow={1} p={2}  display={'flex'} flexDirection={"column"} >
-              <Typography variant="h4" fontWeight={500}>
+      
+      <Box flexGrow={1} p={2}  display={'flex'} flexDirection={"column"} >
+              <Typography variant="h3" fontWeight={600}>
                 Hi, I am Mattia, <br />
                 Front-End Developer
               </Typography>
@@ -187,11 +126,12 @@ function Hero() {
       </Box>
       
       </Box>
-      <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
+      <Box display={"flex"} width={"100%"}  flexGrow={1}>
       <HeroInput />
-</Box></Box>}
+</Box> </Box> }
         {isLargeScreen && <BackgroundComp />}
       </Box>
+      
     </ThemeProvider>
   );
 }
