@@ -14,6 +14,16 @@
   min-width: fit-content;
 }
 
+.customBorderTextfied{
+  padding: 1em 5em ;
+  background-image: url('../../images/borderInput.svg');
+  background-size: cover; /* or 'contain' depending on your preference */
+  background-position: left center;
+  background-repeat: no-repeat;
+  width: 10%;
+  min-width: fit-content;
+}
+
 @media only screen and (min-width: 600px){
     .customBorder{
         padding: 0.82em 0;
@@ -24,10 +34,3 @@
     border-color: blueviolet;
 }
 
-.say-hello{
-    background-image: url(../../images/SayHI.svg);
-    background-repeat: no-repeat;
-    background-size:contain;
-    transform: translateY(-80px);
-
-}

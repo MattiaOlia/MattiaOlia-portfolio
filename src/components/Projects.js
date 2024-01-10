@@ -8,11 +8,8 @@ import ProjectCard from './ProjectCard';
 import projectImage1 from "../images/ProjectImage1.png";
 import projectImage2 from "../images/ProjectImage2.png";
 import projectImage3 from "../images/ProjectImage3.png";
-import {Fade} from "@mui/material"
-import { motion } from 'framer-motion';
-import Modal from './Modal';
-import { Button } from 'react-scroll';
-
+import HOPE3G_3 from "../images/Hope3g/HOPE3G_3.svg"
+import Hope3G from './dialogContent/Hope3G';
 
 export function Projects() {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');;
@@ -46,16 +43,17 @@ export function Projects() {
               <Box p={2}>
 
                 <Typography my={2} ml={5} variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>Work</Typography>
-                <Box display={'flex'} justifyContent={"center"} alignItems={isLargeScreen ? "left" : "center"} gap="4em" flexDirection={" column"}>
+                <Box my={2} display={'flex'} justifyContent={"center"} alignItems={isLargeScreen ? "left" : "center"} gap="4em" flexDirection={" column"}>
                   
                 
                   
                     <ProjectCard 
-                      project_image={projectImage1}
-                      project_title={"C-Track"}
+                      project_image={HOPE3G_3}
                       project_desc={"C-Track is a web-based platform that provides bfgfg nbbnbn bnnvv bnbnvhgh nmnm"}
                       project_ghl={"https://github.com/MattiaOlia/CTrack"}  
                       isMain={true}
+                      dialogTitle={"HOPE 3G"}
+                      dialogContent={<Hope3G />}
                    />
                    
                 

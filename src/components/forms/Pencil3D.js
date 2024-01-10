@@ -13,7 +13,7 @@ export default function Pencil3D() {
     position: "relative",
     height: "600px",
     width: "100%",
-    minWidth: "500px",
+    minWidth: "600px",
     background: `url('https://prod.spline.design/Wph70Kq8p7pxfX9w/scene.splinecode')`,
     backgroundSize: "contain", // o "contain" a seconda delle tue esigenze
     backgroundPosition: "center",
@@ -23,7 +23,7 @@ export default function Pencil3D() {
     {/* Assicurati che il componente Spline supporti uno stile background */}
     <Spline
       sx={{ zIndex: 0, position: "relative" }}
-      scene="https://prod.spline.design/D34pt2kLna45AUH9/scene.splinecode"
+      scene="https://prod.spline.design/7tAlpIr-Y-6wvPqD/scene.splinecode"
     />
   </Suspense>
 </div>

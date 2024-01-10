@@ -1,12 +1,8 @@
 import React from 'react'
 import InputForm from './InputForm'
 import { Box } from '@mui/material'
-import SayHi from "../../images/SayHI.svg"
 import "./inputForm.css"
-import Grid from '@mui/material/Grid';
-import Arrow from '../arrow/Arrow'
 import { Button } from '@mui/material';
-import { Application } from '@splinetool/runtime';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
@@ -26,7 +22,7 @@ const HeroInput = () => {
       
       
         <Box>  
-         <InputForm />
+         <InputForm isHero={true} />
     
       
       <Box display={'flex'} alignItems={'center'} gap={"1.5em"} justifyContent={isLargeScreen ? "" : "center"} >

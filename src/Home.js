@@ -13,6 +13,8 @@ import { Box } from '@mui/material';
 import ScrollAnimation from './components/ScrollAnimation';
 import { motion, useAnimation } from 'framer-motion';
 
+
+
 function Home() {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const isLargeScreen = useMediaQuery('(min-width: 900px)');
@@ -62,9 +64,7 @@ function Home() {
                 flexDirection="column"
                 
                 style={{ position: 'relative' }}
-              >
-               
-                           
+              >    
               
                 <Box id="hero" ref={heroRef}>
                 <Hero />
@@ -73,14 +73,14 @@ function Home() {
                 <Box bgcolor={"white"} m={isSmallScreen ? 0 : '2em 0'} id="projects" ref={projectsRef}>
                   <Projects />
                 </Box>
-                <Box id="about" ref={aboutRef}>
+                <Box id="about" ref={aboutRef} px={isLargeScreen ? 8 : 0} my={5}>
                   <About />
                 </Box>
-                </Box>
+              
                 <Box id="contact" ref={contactRef}>
                   <Contact />
                 </Box>
-                
+                </Box>
               </Box>
             </Fade>
           </InView>

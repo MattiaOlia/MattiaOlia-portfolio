@@ -3,20 +3,16 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
-import TextField from '@mui/material/TextField';
-import AccountCircle from '@mui/icons-material/AccountCircle'; // You can replace this icon with your desired one
-import BorderImage from '../../images/borderInput.svg'; // Replace with the path to your border image
 import  "./inputForm.css"
-import { Box } from '@mui/material';
+import { Box, Typography} from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton } from '@mui/material';
-import { WidthFull } from '@mui/icons-material';
-import arrowButton from "../../images/arrowButton.svg"
-import { Button } from "@mui/material"
 import { useMediaQuery } from '@mui/material';
-
+import theme from "../../theme";
 import SendIcon from '@mui/icons-material/Send';
-const InputForm = () => { 
+import { ThemeProvider } from '@emotion/react';
+
+const InputForm = (props) => { 
   const [isHovered, setHovered] = useState(false);
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const handleMouseEnter = () => {
@@ -28,15 +24,21 @@ const InputForm = () => {
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <Box display={"flex"} justifyContent={"space-between"} >
     <FormControl >
+      {!props.isHero && <label><Typography variant="h6">{props.label}</Typography></label>}
       <Box display={"flex"} width={"100%"} alignItems={"center"} gap={2} >
       <Box className={"customBorder"}>
-      <OutlinedInput sx={{ minWidth: isSmallScreen ? "300px" : "370px"}}
+      
+      <OutlinedInput 
+       sx={{ minWidth: isSmallScreen ? "300px" : "370px"}}
         id="custom-input"
       />
     </Box>
-    <Box>   
+    
+    {props.isHero &&
+    <Box> 
     <IconButton
                   color="primary"
                   component="a"
@@ -49,13 +51,11 @@ const InputForm = () => {
                 >
                   <SendIcon sx={{fontSize: "3rem" }} />
      </IconButton>
-     </Box>     
+     </Box>   }  
 </Box>
     </FormControl>
-   {/*<Box  maxHeight={"80px"}>
-    <Arrow />
-</Box>*/}
     </Box>
+    </ThemeProvider>
   );
 };
 

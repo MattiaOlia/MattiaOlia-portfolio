@@ -11,6 +11,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import theme from "../theme";
 
+
+
 export default function ProjectCard(props) {
   const isLargeScreen = useMediaQuery('(min-width: 900px)');
   const fullScreen = useMediaQuery(useTheme().breakpoints.down('md'));
@@ -46,7 +48,7 @@ export default function ProjectCard(props) {
             
           }}>
             <Box display={"flex"} alignSelf={isLargeScreen && isMain ? "flex-end" : "center"}>
-          <CardContent sx={{width:"80%", display:"flex", flexDirection:"column", justifyContent:"space-evenly", height:"100%", padding:isLargeScreen && isMain  ? "2em" : "2em 1em", border: isLargeScreen && isMain ? "solid" : "none"}} >
+          <CardContent sx={{width:"80%", display:"flex", flexDirection:"column", justifyContent:"space-evenly", height:"100%", padding:isLargeScreen && isMain  ? "2em" : "2em 1em"}} >
               <Typography gutterBottom variant="h5" fontWeight={400} component="div">
                 {props.project_title}
               </Typography>
@@ -75,10 +77,11 @@ export default function ProjectCard(props) {
           fullScreen={fullScreen}
           open={open}
           fullWidth={true}
-          maxWidth={"xl"}
+          maxWidth={"md"}
           onClose={handleClose}
           aria-labelledby="responsive-dialog-title"
-        >
+        > 
+        <Box maxWidth={'700px'} display="flex" flexDirection={"column"} margin={'auto'} overflow={''}>
           <DialogTitle>
             <Box display={"flex"} justifyContent={"space-between"} sx={{ width: "100%" }} alignItems={"flex-end"} border={"solid"}>
               <IconButton
@@ -88,15 +91,14 @@ export default function ProjectCard(props) {
                 <ArrowBackIcon sx={{ fontSize: "3rem" }} />
               </IconButton>
             </Box>
-            <Typography gutterBottom textAlign="end" variant="h4" fontWeight={400} component="div">Tra taras bdb</Typography>
+            <Typography gutterBottom textAlign="end" variant="h4" fontWeight={400} component="div">{props.dialogTitle}</Typography>
           </DialogTitle>
           <DialogContent>
-            <DialogContentText>
-              Let Google help apps determine location. This means sending anonymous
-              location data to Google, even when no apps are running.
+            <DialogContentText color={"black"}>
+              {props.dialogContent}
             </DialogContentText>
           </DialogContent>
-          
+          </Box>
         </Dialog>
       </React.Fragment>
     </ThemeProvider>
