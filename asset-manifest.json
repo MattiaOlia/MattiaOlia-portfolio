@@ -1,12 +1,27 @@
 {
   "files": {
-    "main.css": "/MattiaOlia-portfolio/static/css/main.404a2fd0.css",
-    "main.js": "/MattiaOlia-portfolio/static/js/main.d1069086.js",
+    "main.css": "/MattiaOlia-portfolio/static/css/main.57bdfdfa.css",
+    "main.js": "/MattiaOlia-portfolio/static/js/main.78526512.js",
+    "static/js/313.2b02f044.chunk.js": "/MattiaOlia-portfolio/static/js/313.2b02f044.chunk.js",
+    "static/js/2.672cfa38.chunk.js": "/MattiaOlia-portfolio/static/js/2.672cfa38.chunk.js",
+    "static/js/708.d98e442f.chunk.js": "/MattiaOlia-portfolio/static/js/708.d98e442f.chunk.js",
     "static/js/787.1ed0c42c.chunk.js": "/MattiaOlia-portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/js/872.9102b29a.chunk.js": "/MattiaOlia-portfolio/static/js/872.9102b29a.chunk.js",
+    "static/js/227.3dd6b200.chunk.js": "/MattiaOlia-portfolio/static/js/227.3dd6b200.chunk.js",
+    "static/js/526.41c389e0.chunk.js": "/MattiaOlia-portfolio/static/js/526.41c389e0.chunk.js",
+    "static/js/232.335b92f0.chunk.js": "/MattiaOlia-portfolio/static/js/232.335b92f0.chunk.js",
+    "static/js/237.4ad92e49.chunk.js": "/MattiaOlia-portfolio/static/js/237.4ad92e49.chunk.js",
+    "static/media/HOPE3G_3.svg": "/MattiaOlia-portfolio/static/media/HOPE3G_3.1aa598e4a9a70d4f1bb240722e216719.svg",
+    "static/media/HOPE3G_2.svg": "/MattiaOlia-portfolio/static/media/HOPE3G_2.e2689e7ef09abf260cfb37c7cdd94083.svg",
+    "static/media/HOPE3G_1.png": "/MattiaOlia-portfolio/static/media/HOPE3G_1.f2201e54671610c4fab3.png",
+    "static/media/HOPE3G_4.png": "/MattiaOlia-portfolio/static/media/HOPE3G_4.76d64089370ac09b6f95.png",
     "static/media/ProjectImage2.png": "/MattiaOlia-portfolio/static/media/ProjectImage2.f3e1324b985dad7d4d51.png",
+    "static/media/HopeIS_3.png": "/MattiaOlia-portfolio/static/media/HopeIS_3.fe7ccd8567855dcdbd5d.png",
     "static/media/Karla-VariableFont_wght.ttf": "/MattiaOlia-portfolio/static/media/Karla-VariableFont_wght.873b3ab26751da74a1bc.ttf",
     "static/media/ProjectImage1.png": "/MattiaOlia-portfolio/static/media/ProjectImage1.a8b83a2b40a547716c85.png",
     "static/media/Mattia Olia CV.pdf": "/MattiaOlia-portfolio/static/media/Mattia Olia CV.9baaaa863d7201c52d69.pdf",
+    "static/media/HopeIS_2.png": "/MattiaOlia-portfolio/static/media/HopeIS_2.4d4e8e4d02ec8d361699.png",
+    "static/media/borderInput.svg": "/MattiaOlia-portfolio/static/media/borderInput.2c7fd273f070bf22f67f.svg",
     "static/media/ProjectImage3.png": "/MattiaOlia-portfolio/static/media/ProjectImage3.8b63500450b663dc3afb.png",
     "static/media/eb-garamond-latin-600italic.woff": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-600italic.99ac2cb4253d771fdd5a.woff",
     "static/media/eb-garamond-latin-700italic.woff": "/MattiaOlia-portfolio/static/media/eb-garamond-latin-700italic.43325a2b4808c8750d80.woff",
@@ -47,12 +62,19 @@
     "static/media/heebo-latin-400.woff2": "/MattiaOlia-portfolio/static/media/heebo-latin-400.375dc5fc1d1dcd46d770.woff2",
     "static/media/heebo-latin-100.woff2": "/MattiaOlia-portfolio/static/media/heebo-latin-100.070d646b699bf25bbb17.woff2",
     "index.html": "/MattiaOlia-portfolio/index.html",
-    "main.404a2fd0.css.map": "/MattiaOlia-portfolio/static/css/main.404a2fd0.css.map",
-    "main.d1069086.js.map": "/MattiaOlia-portfolio/static/js/main.d1069086.js.map",
-    "787.1ed0c42c.chunk.js.map": "/MattiaOlia-portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.57bdfdfa.css.map": "/MattiaOlia-portfolio/static/css/main.57bdfdfa.css.map",
+    "main.78526512.js.map": "/MattiaOlia-portfolio/static/js/main.78526512.js.map",
+    "313.2b02f044.chunk.js.map": "/MattiaOlia-portfolio/static/js/313.2b02f044.chunk.js.map",
+    "708.d98e442f.chunk.js.map": "/MattiaOlia-portfolio/static/js/708.d98e442f.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/MattiaOlia-portfolio/static/js/787.1ed0c42c.chunk.js.map",
+    "872.9102b29a.chunk.js.map": "/MattiaOlia-portfolio/static/js/872.9102b29a.chunk.js.map",
+    "227.3dd6b200.chunk.js.map": "/MattiaOlia-portfolio/static/js/227.3dd6b200.chunk.js.map",
+    "526.41c389e0.chunk.js.map": "/MattiaOlia-portfolio/static/js/526.41c389e0.chunk.js.map",
+    "232.335b92f0.chunk.js.map": "/MattiaOlia-portfolio/static/js/232.335b92f0.chunk.js.map",
+    "237.4ad92e49.chunk.js.map": "/MattiaOlia-portfolio/static/js/237.4ad92e49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.404a2fd0.css",
-    "static/js/main.d1069086.js"
+    "static/css/main.57bdfdfa.css",
+    "static/js/main.78526512.js"
   ]
 }
