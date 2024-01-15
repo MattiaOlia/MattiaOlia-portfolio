@@ -46,48 +46,44 @@ function Home() {
   return (
     <div>
       <Router>
-      <motion.div
-      initial={{ opacity: 0, y: 0 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 3, delay: 3}}
-    >
-        <Box maxWidth={"1600px"} display="flex" margin={"auto"} overflow={""} >
-        
-          <Navbar />
-          <InView onChange={(inView, entry) => setIsVisible(inView)}>
-            <Fade in={isVisible} timeout={1000}>
-            
-              <Box
-                m={isSmallScreen ? 0 : 'auto'}
-                display="flex"
-                flexDirection="column"
-                
-                style={{ position: 'relative' }}
-              >    
-              
-                <Box id="hero" ref={heroRef}>
-                <Hero />
-                </Box>
-                <Box backgroundColor={"white"} px={isLargeScreen ? 8 : 0}>
-                <Box bgcolor={"white"} m={isSmallScreen ? 0 : '2em 0'} id="projects" ref={projectsRef}>
-                  <Projects />
-                </Box>
-                <Box id="about" ref={aboutRef} px={isLargeScreen ? 8 : 0} my={5}>
-                  <About />
-                </Box>
-              
-                <Box id="contact" ref={contactRef}>
-                  <Contact />
-                </Box>
-                </Box>
-              </Box>
-            </Fade>
-          </InView>
+  <motion.div
+    initial={{ opacity: 0, y: 0 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -100 }}
+    transition={{ duration: 3, delay: 3}}
+  >
+    <Box maxWidth={"1600px"} display="flex" flexDirection={"column"} margin={"auto"} overflowX={"hidden"} width={"100%"} justifyContent={"center"}>
+      <Navbar />
+      <InView onChange={(inView, entry) => setIsVisible(inView)}>
+        <Fade in={isVisible} timeout={1000}>
+          <Box
+            display="flex"
+            flexDirection="column"
+           
+            sx={{ position: 'relative' }}
+            width={"100%"}
+          >
+            <Box id="hero" ref={heroRef}>
+              <Hero />
+            </Box>
+          </Box>
+          </Fade>
+        </InView>
+        <Box backgroundColor={"white"} px={isLargeScreen ? 10 : 0}>
+          <Box bgcolor={"white"} m={isSmallScreen ? 0 : '2em 0'} id="projects" ref={projectsRef} width="100%">
+            <Projects />
+          </Box>
+          <Box id="about" ref={aboutRef}  my={5} width="100%">
+            <About />
+          </Box>
+          <Box id="contact" ref={contactRef} width="100%" mb={6}>
+            <Contact />
+          </Box>
         </Box>
-        </motion.div>
-      </Router>
-    </div>
+      </Box>
+</motion.div>
+</Router>
+      </div>
   );
 }
 

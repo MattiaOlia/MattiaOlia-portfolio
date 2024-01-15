@@ -43,28 +43,28 @@ function Hero() {
         alignItems={isLargeScreen ? 'center' : 'flex-start'}
         justifyContent={"center"}
         maxHeight={"700px"}
-        border={"solid green"}
+       
         maxWidth={"1400px"}
         margin={"0 auto"}
         
       >
 
         {isSmallScreen ? (
-           <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"} alignItems={'center'} gap={1} justifyContent={"center"} mt={8}>
+           <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"} alignItems={'center'} gap={1} justifyContent={"center"} mt={8} border={"solid"}>
            
-           <Box border={" solid green"} sx={{padding:"3em 1em"}}>
+           
            
            <Typography variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>
              Hi, I am Mattia, <br />
              Front-end developer
            </Typography>
            
-           <Typography variant="body1" mt={2}>
+           <Typography variant="body1" my={5}>
              I focus on the development of web applications, something that I enjoy exploring and learning more about every day.
              Always looking to connect!<br />
              Want to get in touch about a project? 
            </Typography>
-           </Box>
+          
            <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
       <HeroInput />
 </Box>
@@ -83,14 +83,14 @@ function Hero() {
           >
             
             <Box flexGrow={1} pl={3} sx={{ marginLeft: isLargeScreen ? "2em" : "1em"}} display={'flex'} flexDirection={"column"} >
-              <Typography variant={isLargeScreen ? "h2" : "h4"} fontWeight={isLargeScreen ? 600 : 400}>
+              <Typography variant={isLargeScreen ? "h2" : "h4"} fontWeight={isLargeScreen ? 600 : 400} my={2}>
                 Hi, I am Mattia, <br />
                 Front-End Developer
               </Typography>
-              <Typography variant="h6">
+              <Typography variant="h6" my={2}>
                 I focus on the development of web applications, <br/> something that I enjoy exploring and learning more about every day.<br/>
                 Always looking to connect!<br />
-                Want to get in touch about a project? Send me a message at:
+
               </Typography>
               <Box display={"flex"} width={"100%"}flexGrow={1}>
                 <HeroInput />
@@ -113,7 +113,7 @@ function Hero() {
         
       >
       
-      <Box flexGrow={1} p={2}  display={'flex'} flexDirection={"column"} >
+      <Box flexGrow={1} pl={10} my={2}  display={'flex'} flexDirection={"column"} >
               <Typography variant="h3" fontWeight={600}>
                 Hi, I am Mattia, <br />
                 Front-End Developer
@@ -121,7 +121,7 @@ function Hero() {
               <Typography variant="h6">
                 I focus on the development of web applications, <br/> something that I enjoy exploring and learning more about every day.<br/>
                 Always looking to connect!<br />
-                Want to get in touch about a project? Send me a message at:
+               
               </Typography>
       </Box>
       

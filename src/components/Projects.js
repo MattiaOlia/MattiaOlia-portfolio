@@ -10,6 +10,8 @@ import projectImage2 from "../images/ProjectImage2.png";
 import projectImage3 from "../images/ProjectImage3.png";
 import HOPE3G_3 from "../images/Hope3g/HOPE3G_3.svg"
 import Hope3G from './dialogContent/Hope3G';
+import HopeIS_1 from "../images/HopeIS/HopeIS_1.png"
+import HopeIS from './dialogContent/HopeIS';
 
 export function Projects() {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');;
@@ -49,16 +51,11 @@ export function Projects() {
                   
                     <ProjectCard 
                       project_image={HOPE3G_3}
-                      project_desc={"C-Track is a web-based platform that provides bfgfg nbbnbn bnnvv bnbnvhgh nmnm"}
-                      project_ghl={"https://github.com/MattiaOlia/CTrack"}  
+                      project_desc={"User friendly board portal software that aims to teaching safety through Augmented Reality."}
                       isMain={true}
                       dialogTitle={"HOPE 3G"}
                       dialogContent={<Hope3G />}
                    />
-                   
-                
-                  
-
                      <Box display={"flex"}  >
                      {isLargeScreen && <Box  sx={{
         height: '100',
@@ -69,17 +66,18 @@ export function Projects() {
                       }}></Box>}
                         <Box display={"flex"} flexDirection={"column"} justifyContent={"space-evenly"} alignSelf={"center"} gap="4em" >
                       <ProjectCard 
-                      project_image={projectImage2}
-                      project_title={"Task Tracker Dashboard"}
-                      project_desc={" This project is a web-based task tracker dashboard that helps you manage your daily tasks efficiently"}
+                      project_image={HopeIS_1}
+                      dialogTitle={"HOPE Internal System"}
+                      project_desc={"Development of HOPE's Internal System, optimizing staff management, asset storage, and organization details."}
                       project_ghl={"https://github.com/MattiaOlia/TaskTracker"}           
                       isMain={false}
+                      dialogContent={<HopeIS />}
                       />        
                     
                    
                     <ProjectCard 
                       project_image={projectImage3}
-                      project_title={"QR-CODE GENERATOR"}
+                      dialogTitle={"QR-CODE GENERATOR"}
                       project_desc={"With QR-CODE GENERATOR users can easily generate QR codes containing different types of information, such as URLs, text, contact details, and more. One unique feature of QR-Gen is the ability to customize the colors of the QR code to match your branding or personal preferences."}
                       project_ghl={false}
                     />

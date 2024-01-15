@@ -50,7 +50,7 @@ export default function ProjectCard(props) {
             <Box display={"flex"} alignSelf={isLargeScreen && isMain ? "flex-end" : "center"}>
           <CardContent sx={{width:"80%", display:"flex", flexDirection:"column", justifyContent:"space-evenly", height:"100%", padding:isLargeScreen && isMain  ? "2em" : "2em 1em"}} >
               <Typography gutterBottom variant="h5" fontWeight={400} component="div">
-                {props.project_title}
+                {props.dialogTitle}
               </Typography>
               <Typography variant="body1" color="text.secondary">
                 {props.project_desc}
@@ -83,7 +83,7 @@ export default function ProjectCard(props) {
         > 
         <Box maxWidth={'700px'} display="flex" flexDirection={"column"} margin={'auto'} overflow={''}>
           <DialogTitle>
-            <Box display={"flex"} justifyContent={"space-between"} sx={{ width: "100%" }} alignItems={"flex-end"} border={"solid"}>
+            <Box display={"flex"} justifyContent={"space-between"} sx={{ width: "100%" }} alignItems={"flex-end"}>
               <IconButton
                 color="primary"
                 onClick={handleClose}

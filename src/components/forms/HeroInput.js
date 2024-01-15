@@ -5,8 +5,7 @@ import "./inputForm.css"
 import { Button } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { IconButton } from '@mui/material';
-
+import { IconButton , Typography } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
 
 const HeroInput = () => {
@@ -18,10 +17,13 @@ const HeroInput = () => {
     
     <Box sx={{ flexGrow: 1 }}>
     <Box sx={{ zIndex: "3 !important", position: "relative" }} width={"100%"}  display={"flex"} justifyContent={"center"}>
-    
+   
       
       
-        <Box>  
+        <Box> 
+        <Typography variant="h6">
+                         Say HI to me!
+              </Typography> 
          <InputForm isHero={true} />
     
       
