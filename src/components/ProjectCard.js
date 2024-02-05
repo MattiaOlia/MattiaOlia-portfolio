@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Box } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useMediaQuery, useTheme } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
+import { Menu as MenuIcon, Palette } from '@mui/icons-material';
 import { ThemeProvider } from '@mui/material/styles';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import theme from "../theme";
@@ -83,15 +83,16 @@ export default function ProjectCard(props) {
         > 
         <Box maxWidth={'700px'} display="flex" flexDirection={"column"} margin={'auto'} overflow={''}>
           <DialogTitle>
-            <Box display={"flex"} justifyContent={"space-between"} sx={{ width: "100%" }} alignItems={"flex-end"}>
+            <Box p={1} bgcolor={props.dialogTitleBannerColor} display={"flex"} justifyContent={"space-between"} sx={{ width: "100%" }} alignItems={"flex-end"}>
               <IconButton
                 color="primary"
                 onClick={handleClose}
               >
-                <ArrowBackIcon sx={{ fontSize: "3rem" }} />
+                <ArrowBackIcon sx={{ fontSize: "3rem", color:"white" }} />
               </IconButton>
+              <Typography gutterBottom  color={"white"} textAlign="end" variant="h4" fontWeight={400} component="div">{props.dialogTitle}</Typography>
             </Box>
-            <Typography gutterBottom textAlign="end" variant="h4" fontWeight={400} component="div">{props.dialogTitle}</Typography>
+           
           </DialogTitle>
           <DialogContent>
             <DialogContentText color={"black"}>

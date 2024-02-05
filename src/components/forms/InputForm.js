@@ -15,6 +15,7 @@ import { ThemeProvider } from '@emotion/react';
 const InputForm = (props) => {
   const [isHovered, setHovered] = useState(false);
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
+  const isExtraSmall=useMediaQuery('(max-width: 400px)')
   const [message, setMessage] = useState("");
   
   const handleChange = (e) => {
@@ -47,29 +48,34 @@ const InputForm = (props) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
+      <Box display={"flex"} width={"100%"} justifyContent={"space-between"} alignItems={"center"}>
         <FormControl>
-          <Box className={"customBorder"}>
-            <OutlinedInput
-              sx={{ minWidth: isSmallScreen ? "300px" : "370px" }}
-              name="message" value={message} onChange={handleChange}
-            />
+          <Box className={isExtraSmall ? "" : "customBorder"}>
+          <OutlinedInput
+  sx={{
+    minWidth: isSmallScreen ? (isExtraSmall ? "160px" : "240px") : "370px",
+    transform: `scale(${isExtraSmall ? 0.8 : 1})`,
+  }}
+  name="message" value={message} onChange={handleChange}
+/>
           </Box>
         </FormControl>
 
-        {message && (
+        
           <IconButton
             color="primary"
             sx={{
               '&:hover': {
                 borderRadius: '50%',
-              }
+              },
+              visibility: message ? "visible" : "hidden"
             }}
             onClick={handleSubmit}
+            
           >
             <SendIcon sx={{ fontSize: "3rem" }} />
           </IconButton>
-        )}
+        
       </Box>
     </ThemeProvider>
   );

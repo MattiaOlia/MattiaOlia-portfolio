@@ -6,11 +6,13 @@ import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import { TextField } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
+import Pencil3D from './forms/Pencil3D';
 
 export function About() {
   const [isVisible, setIsVisible] = useState(false);
   const aboutRef = useRef(null);
-  const isLargeScreen = useMediaQuery('(min-width: 900px)');
+  const isLargeScreen = useMediaQuery('(min-width: 1200px)');
+  const isMediumScreen = useMediaQuery('(max-width: 1000px)');
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
 
   const [form, setForm] = useState({
@@ -89,17 +91,29 @@ export function About() {
           <Typography my={2} ml={5} variant={isSmallScreen ? 'h2' : 'h1'} fontWeight={400}>
             Get in touch
           </Typography>
+          <Box>
+          <Box  display={"flex"} justifyContent={"space-between"} >
+             <Box display={"flex"}  >
+             {isLargeScreen && <Box  sx={{
+height: '100%',
+width: '5px', 
+backgroundColor: "#1b5e20",  
+borderRadius: '5px',
+marginRight:"3em"  
+              }}></Box>}
 
+          </Box>
           <Box
             component="form"
             onSubmit={handleSubmit}
             display="flex"
             flexDirection={"column"}
-            justifyContent={isSmallScreen ? 'center' : 'space-between'}
-            alignItems={isLargeScreen ? 'left' : 'center'}
-            border="solid"
+            justifyContent={isSmallScreen ? 'center' : 'flex-end'}
+            alignItems={isMediumScreen ? 'center' : 'space-between'}
+            
             width="100%"
             gap={1}
+            maxHeight={"500px"}
           >
             <Box mb={2}>
               <Typography variant="h6">Your Name</Typography>
@@ -127,12 +141,13 @@ export function About() {
                 id="custom-input-textfield"
                 name="userMessage" value={form.userMessage} onChange={(e) => setForm({ ...form, userMessage: e.target.value })}
               />
+               
             </Box>
-
             <Button type="submit" variant="contained" sx={{ width: 'fit-content' }} color="primary">
               Submit
             </Button>
-
+           
+            
             <Dialog open={dialogOpen} onClose={handleCloseDialog}>
               <DialogTitle>
                 <Box width={"md"}>
@@ -145,6 +160,23 @@ export function About() {
                 </Button>
               </DialogContent>
             </Dialog>
+            </Box>
+             
+            {isLargeScreen && (
+  
+    <Box
+      width={"100%"}
+      
+      zIndex={"1"}
+      
+      
+    >
+      <Pencil3D url="https://prod.spline.design/9kYxumzsQV5dY99b/scene.splinecode" />
+    </Box>
+
+)}
+        
+            </Box>
           </Box>
         </Box>
       </div>

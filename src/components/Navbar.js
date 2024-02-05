@@ -105,7 +105,7 @@ function Navbar() {
               style={{ textDecoration: 'none', color: 'inherit'}}
               offset={-90}
             >
-                About
+                Contact
                 </ScrollLink>
               </MenuItem>
 
@@ -122,7 +122,7 @@ function Navbar() {
               style={{ textDecoration: 'none', color: 'inherit'  }}
               offset={+400}
             >
-                Contact
+                Info
                 </ScrollLink>
               </MenuItem>
 
@@ -201,7 +201,7 @@ function Navbar() {
                   style={{ textDecoration: 'none', color: 'inherit',cursor:"pointer"}}
                   offset={-100}
                 >
-                  About
+                  Contact
                 </ScrollLink>
               </Typography>
               
@@ -218,7 +218,7 @@ function Navbar() {
                    style={{ textDecoration: 'none', color: 'inherit',cursor:"pointer" }}
                   
                 >
-                  Contact
+                  Info
                 </ScrollLink>
               </Typography>
                

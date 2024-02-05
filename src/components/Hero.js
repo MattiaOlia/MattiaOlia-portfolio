@@ -40,9 +40,9 @@ function Hero() {
       
       <Box
         display={isLargeScreen ? 'block' : 'flex'}
-        alignItems={isLargeScreen ? 'center' : 'flex-start'}
+        alignItems={isLargeScreen ? 'center' : 'center'}
         justifyContent={"center"}
-        maxHeight={"700px"}
+        //maxHeight={"700px"}
        
         maxWidth={"1400px"}
         margin={"0 auto"}
@@ -50,22 +50,22 @@ function Hero() {
       >
 
         {isSmallScreen ? (
-           <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"} alignItems={'center'} gap={1} justifyContent={"center"} mt={8} border={"solid"}>
+           <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"}  alignItems={'left'} gap={1} justifyContent={"center"}  p={1} border={"solid"}>
            
            
            
-           <Typography variant={isSmallScreen ? 'h2' : "h1"} fontWeight={400}>
+           <Typography variant={isSmallScreen ? 'h4' : "h2"} mt={2} fontWeight={600}>
              Hi, I am Mattia, <br />
              Front-end developer
            </Typography>
            
-           <Typography variant="body1" my={5}>
+           <Typography variant="body1"  my={2}>
              I focus on the development of web applications, something that I enjoy exploring and learning more about every day.
              Always looking to connect!<br />
              Want to get in touch about a project? 
            </Typography>
           
-           <Box display={"flex"} width={"100%"} border={"solid green"} flexGrow={1}>
+           <Box display={"flex"} width={"100%"}  >
       <HeroInput />
 </Box>
          
@@ -92,10 +92,11 @@ function Hero() {
                 Always looking to connect!<br />
 
               </Typography>
-              <Box display={"flex"} width={"100%"}flexGrow={1}>
-                <HeroInput />
-                <Box  width={"100%"}  sx={{transform: "translateY(-190px) translateX(-70px)" }}>
-                  <Pencil3D />
+              <Box display={"flex"} width={"100%"}>
+                <HeroInput  />
+                
+               <Box  width={"100%"}  sx={{transform: "translateY(-190px) translateX(-30px)" }}>
+                  <Pencil3D url="https://prod.spline.design/HNIC8SaqO7hOUfGp/scene.splinecode/" />
                 </Box>
               </Box>
             </Box>
@@ -129,7 +130,7 @@ function Hero() {
       <Box display={"flex"} width={"100%"}  flexGrow={1}>
       <HeroInput />
 </Box> </Box> }
-        {isLargeScreen && <BackgroundComp />}
+        
       </Box>
       
     </ThemeProvider>

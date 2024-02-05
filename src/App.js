@@ -3,15 +3,17 @@ import './App.css';
 import Home from './Home';
 import 'typeface-heebo'
 import HeroAnimationAvatar from './components/HeroAnimationAvatar';
+import { Box } from "@mui/material";
 
 const App = () => {
   
 
   return (
-    <div>
+    <Box>
+      
      <HeroAnimationAvatar />
      <Home />
-    </div>
+    </Box>
   );
 };
 

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Box } from '@mui/material';
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
-export default function Pencil3D() {
+export default function Pencil3D(props) {
   return (
     <div
   style={{
@@ -11,21 +11,19 @@ export default function Pencil3D() {
     overflow: "visible",
     zIndex: 0,
     position: "relative",
-    height: "600px",
+    height: "700px",
     width: "100%",
     minWidth: "600px",
-    background: `url('https://prod.spline.design/Wph70Kq8p7pxfX9w/scene.splinecode')`,
-    backgroundSize: "contain", // o "contain" a seconda delle tue esigenze
+    background: `url('https://prod.spline.design/rlV6cCP8yUe-4dJv/scene.splinecode')`,
+    backgroundSize: "contain", 
     backgroundPosition: "center",
   }}
 >
   <Suspense fallback={<div>Loading...</div>}>
-    {/* Assicurati che il componente Spline supporti uno stile background */}
     <Spline
       sx={{ zIndex: 0, position: "relative" }}
-      scene="https://prod.spline.design/7tAlpIr-Y-6wvPqD/scene.splinecode"
-    />
-  </Suspense>
+      scene={props.url} />
+      </Suspense>
 </div>
 );
 }

@@ -59,26 +59,52 @@ function Home() {
           <Box
             display="flex"
             flexDirection="column"
-           
-            sx={{ position: 'relative' }}
+            justifyContent={"center"}
+           sx={{ position: 'relative' }}
             width={"100%"}
           >
-            <Box id="hero" ref={heroRef}>
+            <Box 
+             sx={{
+              background: "radial-gradient(ellipse at right, #eaf8e5 0%, #eaf8e5 80%, transparent 70%)",
+              backgroundSize: "110% 600%",
+              backgroundRepeat:"no-repeat",
+              backgroundPositionX:"350px",
+              backgroundPositionY:"50px"
+             }}
+            
+            id="hero" ref={heroRef}>
               <Hero />
             </Box>
           </Box>
           </Fade>
         </InView>
-        <Box backgroundColor={"white"} px={isLargeScreen ? 10 : 0}>
+        <Box  width={"100%"} >
+        <Box margin={0} width={"100%"}
+          sx={{
+            background: "radial-gradient(ellipse at top, #eaf8e5 0%, #eaf8e5 80%, transparent 70%)",
+            backgroundSize: "300% 35%",
+            backgroundRepeat:"no-repeat",
+            backgroundPositionX:"650px",
+            backgroundPositionY:"1200px"
+            
+          }}
+
+        >
+        <Box  px={isLargeScreen ? 10 : 0}>
           <Box bgcolor={"white"} m={isSmallScreen ? 0 : '2em 0'} id="projects" ref={projectsRef} width="100%">
             <Projects />
           </Box>
-          <Box id="about" ref={aboutRef}  my={5} width="100%">
-            <About />
           </Box>
-          <Box id="contact" ref={contactRef} width="100%" mb={6}>
+          <Box  px={isLargeScreen ? 10 : 0} >
+            <Box id="about" ref={aboutRef}  my={5} width="100%">
+            <About />
+            </Box>
+            <Box id="contact" ref={contactRef} width="100%" mb={6}>
             <Contact />
           </Box>
+          </Box>
+          
+      </Box>
         </Box>
       </Box>
 </motion.div>
@@ -88,3 +114,6 @@ function Home() {
 }
 
 export default Home;
+
+
+//cambiare form, cambiare sfondo, mettere icon modul, 

@@ -19,6 +19,8 @@ function BackgroundComp() {
   const containerStyle = {
     position: "fixed",
     opacity: "0.2",
+ 
+    opacity: "0.2",
     backgroundRepeat: "no-repeat",
     top: -100,
     right: -500,

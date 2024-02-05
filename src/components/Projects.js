@@ -5,13 +5,12 @@ import { Container, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useMediaQuery } from '@mui/material';
 import ProjectCard from './ProjectCard';
-import projectImage1 from "../images/ProjectImage1.png";
-import projectImage2 from "../images/ProjectImage2.png";
-import projectImage3 from "../images/ProjectImage3.png";
 import HOPE3G_3 from "../images/Hope3g/HOPE3G_3.svg"
 import Hope3G from './dialogContent/Hope3G';
 import HopeIS_1 from "../images/HopeIS/HopeIS_1.png"
 import HopeIS from './dialogContent/HopeIS';
+import QrLogo from "../images/Qrgen/QrLogo.png"
+import QRgenerator from './dialogContent/QRgenerator';
 
 export function Projects() {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');;
@@ -55,6 +54,7 @@ export function Projects() {
                       isMain={true}
                       dialogTitle={"HOPE 3G"}
                       dialogContent={<Hope3G />}
+                      dialogTitleBannerColor={"#44873E"}
                    />
                      <Box display={"flex"}  >
                      {isLargeScreen && <Box  sx={{
@@ -64,7 +64,20 @@ export function Projects() {
         borderRadius: '5px',
         marginRight:"3em"  
                       }}></Box>}
+
+
+
                         <Box display={"flex"} flexDirection={"column"} justifyContent={"space-evenly"} alignSelf={"center"} gap="4em" >
+
+                        <ProjectCard 
+                      project_image={QrLogo}
+                      dialogTitle={"QR-CODE GENERATOR"}
+                      project_desc={"With QR-CODE GENERATOR users can easily generate QR codes containing different types of information."}
+                      project_ghl={false}
+                      dialogContent={<QRgenerator />}
+                      dialogTitleBannerColor={"#6491A5"}
+                    /> 
+
                       <ProjectCard 
                       project_image={HopeIS_1}
                       dialogTitle={"HOPE Internal System"}
@@ -72,15 +85,11 @@ export function Projects() {
                       project_ghl={"https://github.com/MattiaOlia/TaskTracker"}           
                       isMain={false}
                       dialogContent={<HopeIS />}
+                      dialogTitleBannerColor={"#170556"}  
                       />        
                     
                    
-                    <ProjectCard 
-                      project_image={projectImage3}
-                      dialogTitle={"QR-CODE GENERATOR"}
-                      project_desc={"With QR-CODE GENERATOR users can easily generate QR codes containing different types of information, such as URLs, text, contact details, and more. One unique feature of QR-Gen is the ability to customize the colors of the QR code to match your branding or personal preferences."}
-                      project_ghl={false}
-                    />
+                    
                   </Box>
                     
                     </Box>

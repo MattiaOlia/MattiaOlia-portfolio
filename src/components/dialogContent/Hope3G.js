@@ -3,7 +3,9 @@ import React, { Suspense, lazy } from 'react';
 import { useMediaQuery } from '@mui/material';
 import { Box, Typography} from '@mui/material';
 import { motion } from 'framer-motion';
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { IconButton} from '@mui/material';
+import OpenInBrowserIcon from '@mui/icons-material/OpenInBrowser';
 import HOPE3G_1 from "../../images/Hope3g/HOPE3G_1.png"
 import HOPE3G_2 from "../../images/Hope3g/HOPE3G_2.svg"
 import HOPE3G_3 from "../../images/Hope3g/HOPE3G_3.svg"
@@ -20,6 +22,26 @@ function Hope3G() {
      
         
           <Box m={isSmallScreen ? 0 : 'auto'} display="flex" flexDirection="column">
+            <Box display={"flex"} alignItems={"center"} justifyContent={"right"}>
+          <IconButton
+                  color="primary"
+                  component="a"
+                  href="https://github.com/MattiaOlia"
+                  target="Github"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon sx={{ fontSize: "3rem" }} />
+                </IconButton>
+                <IconButton
+                  color="primary"
+                  component="a"
+                  href="https://hope3g.com/"
+                  target="Go to website"
+                  rel="noopener noreferrer"
+                >
+                  <OpenInBrowserIcon sx={{ fontSize: "3rem" }} />
+                </IconButton>
+              </Box>
           <Typography mb={2} variant="h6" color="text.secondary">
           HOPE 3G is an innovative centre for immersive learning experiences, as well as a web-based platform for informational purposes and course purchasing. HOPE 3G stands out as an inventive project that leverages Augmented Reality (AR) technology, seamlessly weaving reading and typing lessons into engaging activities for children.
           </Typography>

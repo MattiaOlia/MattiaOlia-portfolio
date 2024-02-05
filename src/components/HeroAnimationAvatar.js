@@ -6,6 +6,8 @@ import theme from "../theme";
 import { ThemeProvider } from '@emotion/react';
 import { animateScroll as scroll } from 'react-scroll';
 import { useMediaQuery } from '@mui/material';
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
+import { IconButton  } from '@mui/material';
 
 export default function HeroAnimationAvatar() {
   const [animationPlayed, setAnimationPlayed] = useState(false);
@@ -97,14 +99,18 @@ export default function HeroAnimationAvatar() {
                 </Box>
               </Box>
             </Box>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={animationClose}
-              sx={{ alignSelf: isLargeScreen ? 'flex-end' : "center", marginRight: isLargeScreen ? "5em" : "0"}} 
-            >
-              SKIP ANIMATION
-            </Button>
+            
+            <IconButton
+                  color="primary"
+                  component="a"
+                  target="_blank"
+                  rel="Skip animation"
+                  variant="contained"
+                  onClick={animationClose}
+                  sx={{ alignSelf: isLargeScreen ? 'flex-end' : "center", marginRight: isLargeScreen ? "5em" : "0", transform:"translateY(-50px)"}}
+                >
+                  <ArrowDropDownCircleIcon sx={{ fontSize: "5rem", }} />
+                </IconButton>
           </Box>
         </Box>
       )}
