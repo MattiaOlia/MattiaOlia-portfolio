@@ -5,8 +5,7 @@ import { Typography, Box, Button, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useMediaQuery } from '@mui/material';
-import BackgroundComp from './background/BackgroundComp';
-import CVfile from "./Mattia Olia CV.pdf";
+
 import { pdfjs } from 'react-pdf';
 import Pencil3D from './forms/Pencil3D';
 import HeroInput from './forms/HeroInput';
@@ -17,7 +16,7 @@ function Hero() {
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const isLargeScreen = useMediaQuery('(min-width: 1200px)');
   const [zoomed, setZoomed] = useState(false);
-  const pdfUrl = CVfile;
+ 
 
   useEffect(() => {
     setZoomed(!zoomed);
@@ -25,15 +24,9 @@ function Hero() {
 
   
 
-  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+  
 
-  const downloadPDF = () => {
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.target = '_blank';
-    link.download = 'Mattia Olia CV.pdf';
-    link.click();
-  };
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -50,7 +43,7 @@ function Hero() {
       >
 
         {isSmallScreen ? (
-           <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"}  alignItems={'left'} gap={1} justifyContent={"center"}  p={1} border={"solid"}>
+           <Box minHeight={"100vh"}  display={"flex"} flexDirection={"column"}  alignItems={'left'} gap={1} justifyContent={"center"}  p={1}>
            
            
            
@@ -82,7 +75,7 @@ function Hero() {
             marginTop="7em"
           >
             
-            <Box flexGrow={1} pl={3} sx={{ marginLeft: isLargeScreen ? "2em" : "1em"}} display={'flex'} flexDirection={"column"} >
+            <Box flexGrow={1} pl={1} sx={{ marginLeft: isLargeScreen ? "1em" : "1em"}} display={'flex'} flexDirection={"column"} >
               <Typography variant={isLargeScreen ? "h2" : "h4"} fontWeight={isLargeScreen ? 600 : 400} my={2}>
                 Hi, I am Mattia, <br />
                 Front-End Developer
@@ -95,14 +88,15 @@ function Hero() {
               <Box display={"flex"} width={"100%"}>
                 <HeroInput  />
                 
-               <Box  width={"100%"}  sx={{transform: "translateY(-190px) translateX(-30px)" }}>
-                  <Pencil3D url="https://prod.spline.design/HNIC8SaqO7hOUfGp/scene.splinecode/" />
+               <Box  width={"100%"}  sx={{transform: " translateY(-120px) translateX(-30px)"}}  //translateY(-190px)
+               >
+                  <Pencil3D url="https://prod.spline.design/C1AQfGsj-D3fwM9v/scene.splinecode" />
                 </Box>
               </Box>
             </Box>
           </Box>
         ) :
-        <Box minHeight={"100vh"}  mt={"6em"}>
+        <Box marginBottom={"2em"} mt={"6em"}>
         <Box
         display="flex"
         alignItems={"center"}

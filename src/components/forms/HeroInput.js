@@ -7,11 +7,24 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { IconButton , Typography } from '@mui/material';
 import { useMediaQuery } from '@mui/material';
+import { pdfjs } from 'react-pdf';
+import CVfile from "../../CVfile/MattiaOliaCV.pdf";
 
 const HeroInput = () => {
    
   const isSmallScreen = useMediaQuery('(max-width: 600px)');
   const isLargeScreen = useMediaQuery('(min-width: 1350px)');
+  
+  const pdfUrl = CVfile;
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
+  const downloadPDF = () => {
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.target = '_blank';
+    link.download = 'Mattia Olia CV.pdf';
+    link.click();
+  };
 
   return (
     
@@ -28,7 +41,7 @@ const HeroInput = () => {
     
       
       <Box display={'flex'} alignItems={'center'} gap={"1.5em"} justifyContent={isLargeScreen ? "" : "center"} >
-    <Button  variant="contained" color="primary" sx={{ width: 'fit-content' }}>
+    <Button onClick={downloadPDF} variant="contained" color="primary" sx={{ width: 'fit-content' }}>
       Download CV
     </Button>
     <IconButton

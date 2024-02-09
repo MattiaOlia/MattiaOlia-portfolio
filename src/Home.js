@@ -84,7 +84,7 @@ function Home() {
             background: "radial-gradient(ellipse at top, #eaf8e5 0%, #eaf8e5 80%, transparent 70%)",
             backgroundSize: "300% 35%",
             backgroundRepeat:"no-repeat",
-            backgroundPositionX:"650px",
+            backgroundPositionX:"750px",
             backgroundPositionY:"1200px"
             
           }}

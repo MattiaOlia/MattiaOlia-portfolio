@@ -23,15 +23,6 @@ function Hope3G() {
         
           <Box m={isSmallScreen ? 0 : 'auto'} display="flex" flexDirection="column">
             <Box display={"flex"} alignItems={"center"} justifyContent={"right"}>
-          <IconButton
-                  color="primary"
-                  component="a"
-                  href="https://github.com/MattiaOlia"
-                  target="Github"
-                  rel="noopener noreferrer"
-                >
-                  <GitHubIcon sx={{ fontSize: "3rem" }} />
-                </IconButton>
                 <IconButton
                   color="primary"
                   component="a"

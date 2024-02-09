@@ -13,7 +13,7 @@ export default function Pencil3D(props) {
     position: "relative",
     height: "700px",
     width: "100%",
-    minWidth: "600px",
+    minWidth: "800px",
     background: `url('https://prod.spline.design/rlV6cCP8yUe-4dJv/scene.splinecode')`,
     backgroundSize: "contain", 
     backgroundPosition: "center",

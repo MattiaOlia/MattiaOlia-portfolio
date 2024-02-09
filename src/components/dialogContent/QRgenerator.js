@@ -33,9 +33,8 @@ function QRgenerator() {
                   <GitHubIcon sx={{ fontSize: "3rem",color:"#6491A5" }} />
                 </IconButton>
                 <IconButton 
-                 
+                  href="https://qr-generator-black.vercel.app"           
                   component="a"
-                  href="#6491A5"
                   target="Go to website"
                   rel="noopener noreferrer"
                 >
